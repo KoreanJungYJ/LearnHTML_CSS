@@ -1,0 +1,426 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    /*background-color:#6F5897;*/
+    /*background-color:black;*/
+    background: url(back3.jpg) no-repeat center center fixed;
+}
+
+header {
+    /*display:block;*/
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /*background-color:red;*/
+}
+
+.Header_Title_Part {
+    width: 100%;
+    height: 80px;
+}
+
+.Header_Title_Part #Title a {
+    margin-top: 40px;
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 7.5px;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+}
+
+.Header_Title_Part #Sub_Title {
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 10px;
+    margin-top: 15px;
+    text-shadow: 0px 1px #ffffff, 0.7px 0.7px 0.7px black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.Header_Title_Part nav {
+    margin-top: 40px;
+}
+
+.Header_Title_Part nav ul {
+    margin: 0 auto;
+    width: 90%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: block;
+    border-radius: 5px;
+    margin-top: 7.5px;
+    min-width: 600px;
+}
+
+@media (min-width:1292px) {
+    .Header_Title_Part nav ul li {
+        list-style: none;
+        text-align: center;
+        display: inline-block;
+        width: 12%;
+        height: 90%;
+        border-top: 3px solid #DDDDDD;
+        border-bottom: 3px solid #DDDDDD;
+        position: relative;
+        top: 4.65%;
+        margin-left: 0.45%;
+        float: left;
+        transition-timing-function: linear;
+        transition: 1.5s;
+    }
+    .Header_Title_Part nav ul li:hover {
+        border-radius: 15px;
+        background-color: #A0ACF0;
+    }
+    .Header_Title_Part nav ul li a:hover {
+        color: aqua;
+        letter-spacing: 5px;
+        font-weight: bolder;
+    }
+    #B_E:hover {
+        transform: translate(0px, -6px);
+    }
+}
+
+@media (max-width:1291.9px) {
+    .Header_Title_Part nav ul li {
+        list-style: none;
+        float: left;
+        margin-left: 30px;
+        margin-top: 10px;
+        border-bottom: 2px solid #DDDDDD;
+    }
+    .Header_Title_Part nav ul li a:hover {
+        color: aqua;
+        letter-spacing: 4px;
+        font-weight: bolder;
+    }
+}
+
+@media (max-width:1125px) {
+    .Header_Title_Part nav ul li {
+        border-style: none;
+        transform: translate(0px, -25px);
+    }
+    .Header_Title_Part nav ul li a:hover {
+        color: aqua;
+        letter-spacing: 3.5px;
+        font-weight: bolder;
+    }
+}
+
+.Header_Title_Part nav ul li a {
+    color: #92D0D1;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13.5px;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-top: 18px;
+    transition-timing-function: linear;
+    transition: 0.5s;
+}
+
+section {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    min-height: 550px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+article {
+    position: absolute;
+    width: 96%;
+    height: 91%;
+    background-color: rgba(255, 255, 255, 0.93);
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.Explain {
+    width: 100%;
+    height: 15%;
+}
+
+.Explain #Priority {
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    font-family: 'Orbitron', sans-serif;
+    display: block;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.Explain #Sub {
+    color: darkgrey;
+    font-size: 10px;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    margin-right: 35px;
+}
+
+.Wrap_Explain {
+    width: 100%;
+    height: 85%;
+    border-top: 0.1px solid #BFBFBF;
+}
+
+.Wrap_Explain .All_Explain {
+    width: 50%;
+    height: 100%;
+    border-right: 0.1px solid #BFBFBF;
+    display: inline-block;
+    float: left;
+    /*background-color:#D9F6E0;*/
+    /*구역 나누기 위해 임의로 지정*/
+}
+
+.Wrap_Explain .All_Explain .Ex_Boxes {
+    width: 90%;
+    height: 20%;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    margin-left: 20px;
+    margin-top: 16.75px;
+}
+
+.lightblue {
+    /* 글씨 일부 색깔 변경 */
+    color: #544DE0;
+}
+
+.Wrap_Explain #RedBox {
+    border-left: 5px solid #EA5757;
+    border-right: 5px solid #EA5757;
+    overflow: auto;
+}
+
+#RedBox #RedBox_Ex {
+    color: #EA5757;
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.All_Explain .Box_SubEx {
+    /* 왼쪽 설명 글 */
+    color: #626262;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 6.5px;
+    margin-top: 1px;
+    line-height: 1.5;
+    text-indent: 9.75px;
+    word-spacing: 2.5px;
+}
+
+.All_Explain .Box_SubEx a {
+    /* 분홍 박스 a태그 적용 부분 */
+    color: #341B44;
+    text-decoration: none;
+}
+
+.Box_SubEx a:hover {
+    text-shadow: 0px 0.5px #ffffff, 0.5px 0.5px 0.5px black;
+    text-decoration: underline;
+}
+
+.Wrap_Explain #PinkBox {
+    border-left: 5px solid #DC7EC7;
+    border-right: 5px solid #DC7EC7;
+    overflow: auto;
+}
+
+#PinkBox #PinkBox_Ex {
+    color: #DC7EC7;
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.Ex_Boxes #PinkBox_Font {
+    /*color및 text-decoration은 a태그에 적용!*/
+    /*font-family: 'Orbitron', sans-serif;*/
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 7.5px;
+    margin-top: 12.5px;
+    text-transform: capitalize;
+    font-size: 14.5px;
+    font-weight: bold;
+}
+
+.Wrap_Explain #YellowBox {
+    border-left: 5px solid #B7AA42;
+    border-right: 5px solid #B7AA42;
+    overflow: auto;
+}
+
+.Ex_Boxes #YellowBox_Ex {
+    color: #B7AA42;
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.Wrap_Explain #BlueBox {
+    border-left: 5px solid #3851A5;
+    border-right: 5px solid #3851A5;
+    overflow: auto;
+}
+
+.Ex_Boxes #BlueBox_Ex {
+    color: #3851A5;
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.Ex_Boxes .Box_SubEx li {
+    list-style-type: circle;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 4px;
+}
+
+.Box_SubEx #BlueBox_A {
+    /* 파란 박스 a태그 적용 부분 */
+    text-decoration: none;
+    color: #6E82DD;
+}
+
+.Box_SubEx #BlueBox_A:hover {
+    text-shadow: 0px 0px 0px;
+    text-decoration: underline;
+    color: #3E5AD4;
+}
+
+.Wrap_Explain .Help_Sites {
+    width: 50%;
+    height: 100%;
+    float: right;
+    /*background-color:aquamarine;*/
+    /* background-color:aqua;*/
+    /*구역 나누기 위해 임의로 지정*/
+}
+
+.Help_Sites .Wrap_Box {
+    /* border-top/bottom 적용*/
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 230px;
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+    margin-top: 93.75px;
+}
+
+@media (max-width:1291.9px) {
+    .Help_Sites .OverFlowM {
+        overflow: scroll;
+        width: 100%;
+        height: 100%;
+    }
+    .Help_Sites .Wrap_Box {
+        border-top: 0px;
+        border-bottom: 0px;
+    }
+}
+
+.Help_Sites .Black_Boxes {
+    width: 158.75px;
+    height: 189.5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    margin-left: 4.25%;
+    margin-top: 115px;
+    border-radius: 4.5px;
+    border: 1px solid #C9C9C9;
+    position: relative;
+}
+
+.Black_Boxes .WhiteCover {
+    width: 100%;
+    height: 80%;
+    background-color: floralwhite;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    position: absolute;
+}
+
+.WhiteCover a {
+    font-family: 'Orbitron', sans-serif;
+    color: floralwhite;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    font-size: 14px;
+    text-decoration: none;
+    transition-duration: 2s;
+    overflow: auto;
+}
+
+.WhiteCover a:hover {
+    color: aqua;
+}
+
+.RightTitle{
+    width:50%;
+    height:50px;
+    /*background-color:aqua;*/ /* 위치 및 색깔 임의 지정 */
+    position:absolute;
+    top:98px;
+    text-align: center;
+    text-transform:uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size:18px;
+    font-weight:bolder;
+    letter-spacing:13.5px;
+    margin-top:11.25px;
+}
+/*.footer{
+    position:absolute;
+    width:50%;
+    height:50px;
+    bottom:17.5px;
+    text-align: right;
+}
+.footer #Producer{
+    font-size:8px;
+    font-weight:bolder;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing:2px;
+    word-spacing:5px;
+}*/

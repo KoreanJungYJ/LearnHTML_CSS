@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WCE</title>
+        <style media="screen">
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            body{
+                width:1500px;
+                height:2500px;
+                margin:0 auto;
+                position:relative;
+            }
+            .firstform{
+                width:50%;
+                height:800px;
+                background-color:black;
+                position:absolute;
+            }
+            .secondform{
+                width:50%;
+                height:800px;
+                background-color:#7491D1;
+                margin-left:745px;
+                position:absolute;
+            }
+            .thirdform{
+                position:absolute;
+                width:50%;
+                height:800px;
+                background-color:snow;
+                margin-top:800px;
+            }
+            .fourthform{
+                position:absolute;
+                width:50%;
+                height:800px;
+                background-color:rgba(0,0,255,0.8);
+                margin-top:800px;
+                margin-left:745px;
+            }
+            .fourthform #moveto{
+                margin-left:300px;
+            }
+            .fifthform{
+                position:absolute;
+                width:50%;
+                height:800px;
+                background-color:#555958;
+                margin-top:1600px;
+            }
+            .sixthform{
+                position:absolute;
+                width:50%;
+                height:800px;
+                background-color:#10A979;
+                margin-top:1600px;
+                margin-left:745px;
+            }
+            .formtitles{
+                position:absolute;
+                color:white;
+                font-size:45px;
+                margin-left:38%;
+                margin-top:150px;
+                font-weight:bolder;
+            }
+            .litags{
+                position:absolute;
+                width:300px;
+                height:430px;
+                border:3px solid white;
+                left:30%;
+                margin-top:250px;
+            }
+            ul{
+                width:200px;
+                list-style-type:none;
+                margin-top:75px;
+                margin-left:65px;
+                overflow: hidden;
+            }
+            ul li a{
+                text-decoration: none;
+                color:white;
+                font-size:22.5px;
+                display:block;
+                line-height: 3;
+            }
+            a:hover{
+                color:aqua;
+            }
+            #picture{
+                width:400px;
+                height:450px;
+                margin-left:31.25%;
+                margin-top:250px;
+            }
+            #picture #character{
+                border-radius: 100%;
+                width:85%;
+            }
+            #color_chan{
+                color:black;
+            }
+            #se_picture{
+                width:400px;
+                height:500px;
+                margin:0 auto;
+                margin-top:300px;
+            }
+            #web{
+                width:420px;
+            }
+            .subtitle{
+                color:white;
+                font-size:25px;
+                margin-left:265px;
+                padding-top:220px;
+                position:absolute;
+            }
+            .swapbox{
+                width:450px;
+                height:500px;
+                margin:0 auto;
+                margin-top:350px;
+            }
+            .box{
+                width:450px;
+                height:100px;
+                background-color:white;
+                margin-top:125px;
+                border-radius:10px;
+            }
+            #font_chan{
+                color:rgba(255,255,255,0.5);
+                font-weight:bolder;
+                text-align: center;   
+            }
+            #lastbox{
+                margin-left:20px;
+                margin-top:250px;
+                border:4px solid white;
+                background-color:white;
+                border-radius:25px;
+            }
+            .ask{
+                font-size:20px;
+                font-weight:bolder;
+            }
+            #text{
+                width:250px;
+                height:30px;
+            }
+            #btn{
+                width:75px;
+                height:40px;
+                border-radius:5px;
+                margin-left:180px;
+                margin-top:10px;
+            }
+            #send{
+                color:black;
+                text-decoration: none;
+                font-size:1.4em;
+            }
+            footer{
+                width:100%;
+                height:100px;
+                background-color:black;
+                position:absolute;
+                bottom:0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="firstform">
+                <span class="formtitles">My Logo</span>
+                <div class="litags">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#mywork">My Work</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="secondform">
+                <span class="formtitles">About WCE</span>
+                <div id="picture">
+                   <img src="character.png" id="character"> 
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="thirdform">
+               <span class="formtitles" id="color_chan">My Work</span>
+                <div id="se_picture">
+                    <img src="web.jpg" id="web">
+                </div>
+            </div>
+            <div class="fourthform">
+                <span class="formtitles" id="moveto">Resume</span>
+                <span class="subtitle">A draft from my CV</span>
+                <div class="swapbox">
+                    <div class="box">
+
+                    </div>
+                    <div class="box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="fifthform">
+               <span class="formtitles">Swing By</span>
+                <div class="litags">
+                    
+                </div>
+            </div>
+            <div class="sixthform">
+                <span class="formtitles" id="moveto">-Contacts-</span>
+                <span class="subtitle" id="font_chan">MAKE, GET IN TOUCH</span>
+                
+                <div class="litags" id="lastbox">
+                    <p>
+                        <span class="ask">-Name<br><br><input type="text" id="text" placeholder="여백없이 입력" required autofocus required></span>
+                        <br><br>
+                        
+                        <span class="ask">-Email<br><br><input type="text" id="text" autofocus required></span>
+                        <br><br>
+                        
+                        <span class="ask">-Message<br><br>
+                            <textarea cols=33 rows=5>
+                            </textarea>
+                        </span><br>
+                        
+                        <button id="btn"><a href="Form.html" id="send">Send</a></button>
+                    </p>
+                </div>    
+            </div>            
+        </section>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'ganji';
+    src: url('fonts/raidercrusader.ttf');
+}
+
+@font-face {
+    font-family: 'hana';
+    src: url('fonts/BMHANNA_11yrs_ttf.ttf');
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: ganji;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.fa-bars{
+    color: #d5d5d5;
+}
+
+
+.views {
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+#side-navigation {
+    position: fixed;
+    top: 2vh;
+    right: 0;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0);
+    /*border: 1px solid #000;*/
+    border-radius: 10%;
+    width: 10vw;
+    z-index: 20;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2vw 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#side-navigation>ul {
+    display: none;
+    padding: 0;
+}
+
+#side-navigation li {
+    margin-top: 2vh;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#side-navigation:hover{
+    background-color: #fff;
+}
+#side-navigation:hover ul {
+    display: block;
+    background-color: #fff;
+}
+#side-navigation:hover .fa-bars{
+    color: #000;
+}
+
+#main-page {
+    text-align: center;
+    background-image: url('imgs/background.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#background-cover {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+#title {
+    font-size: 5em;
+    position: relative;
+    top: 35%;
+}
+
+#start {
+    width: 8rem;
+    height: 3rem;
+    font-size: 2rem;
+    background-color: rgba(255, 0, 0, 0);
+    border: 1px solid #fff;
+    border-radius: 5%;
+    display: inline-block;
+    position: absolute;
+    left: 47%;
+    top: 65%;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+#start:hover {
+    background: #fff;
+    color: #000;
+    animation-name: button-rrr;
+    animation-duration: 1s;
+}
+
+#intro-page {
+    text-align: center;
+    height: 50vh;
+    padding-top: 5vh;
+}
+
+#intro {
+    font-size: 4rem;
+    text-align: center;
+}
+
+#intro-desc {
+    margin-top: 8vh;
+    font-family: hana;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#content {
+    width: 70vw;
+    height: 80vh;
+    position: relative;
+    top: 10vh;
+    left: 15vw;
+}
+
+#participate-page {
+    background-image: url('imgs/participate.jpg');
+    background-size: cover;
+}
+
+#school-intro-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.school-logos {
+    width: 8vw;
+    height: 8vw;
+}
+
+.school-column {
+    font-family: hana;
+    display: inline-block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+#subject-page {
+    height: 30rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#subject-content {
+    position: relative;
+    top: 5vh;
+}
+
+#subject-list {
+    font-family: 'Raleway', sans-serif;
+}
+
+#agenda-page {
+    background-color: #051425;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+table {
+    width: 35vw;
+}
+
+.agenda-table td {
+    border: 1px solid #fff;
+    padding: 1rem;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.agenda-table {
+    position: relative;
+    top: 10vh;
+    float: left;
+    margin-left: 10vw;
+}
+
+#judge-page {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#judge-list {
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+    top: 12.5vh;
+}
+
+.judge-li {
+    height: 100%;
+    font-weight: bold;
+    display: inline-block;
+    width: 20vw;
+    margin: 0;
+    float: left;
+    vertical-align: middle;
+    background: gray;
+    color: white;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.judge-li:hover{
+    animation: scale-up 2s 1;
+}
+
+.judge-li span {
+    position: relative;
+    top: 80%;
+}
+
+.judge-li:nth-child(1){
+    background-image: url("https://lh3.googleusercontent.com/xptzYA_gc36MZH3p1ZF14R9LklZsiMwNSclC6hBNP6oihR60ZxtaJ16SzpxfIcRVRzXfUVPuTSxQqzWgqSFBlxKRbEUyCv6weZncjdL9w43qkvxuC3irYGMY-SVmPesBKEYMj7RQRLM2Pab5Kcx-XzZ-agRYKrZdjiHQ_F67jWiECX6Malf2S6U_aluDGI5ArKOu5QsKiRCLhSmomyOPFKI4po3SJRTM8PPq6SaLwREoefGIkkA8FSt2OiBrt9TF3eSKBabGJacR-e2mj_xiVdm9rvxaVZO7IuOVbq9_LtNP71VI36DpZH2vKGhWU7N-TtcvMPc-KLu8ajkyv5i_2HcSsM4EB6boU4AHrbgwIdU74n2H5g99dVR7UAKayeBiH2g2u0GtXU1E-bZn_T8SwpLVwQupVmcW3h_lLCydtjgkNi_yr8F3YLfhg8amg-ZFJYdP6JzxIiXfqr19bjasU3wtkcnrEWdRa5R45K3D6LPDhvN0LgnWJDXCRW8Ql0lXpDYa-E7cUOsT1c4y7wxJUOwySMx1StV_QakcQy-k7ugj0JyQOZSeF7c7HqaCAilXA_SanTIyroBXK_qRmxsSwLc2fFbLXAUnY2kHQEPOvkyE6IejPGne-RcPcO5eHYnj_k0W90bOTWb4dKk1XeB2xTuBYGWhL_T_kP9FUyqZbA=w737-h982-no");
+}
+.judge-li:nth-child(2){
+    background-image: url("https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/12111979_963022120432045_1197834916164003400_n.jpg?oh=19201e655c7c6f204a7e98e990485ae8&oe=58D65A55");
+}
+.judge-li:nth-child(3){
+    background-image: url("https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/12744158_898533893596694_6990684937107467540_n.jpg?oh=76fb4708784f5e2dd504bd79bad27397&oe=59123AB4");
+}
+.judge-li:nth-child(4){
+    background-image: url("https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/11226554_919291944772956_2374358357116120492_n.jpg?oh=64d21a932c8f3fb18a7a7e31953a89db&oe=59126728");
+}
+.judge-li:nth-child(5){
+    background-image: url("https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/11078150_1101488973210011_7336100347733184119_o.jpg?oh=88f3f371e92a3e773083c4c960dfa0f4&oe=58D93E80");
+
+}
+
+.judge-cover {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 20vw;
+    height: 70vh;
+    display: inline-block;
+}
+
+.judge-cover:hover{
+    background-color: #051425;
+}
+.judge-cover:hover span{
+    top: 40%;
+}
+
+#apply-page {
+    background-image: url("imgs/apply.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#apply-cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#apply-form {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 5vh;
+}
+
+#apply-form>form {
+    position: relative;
+    top: 10vh;
+    left: 40%;
+    width: 20%;
+    padding: 0.5em;
+    font-family: "hana";
+}
+
+form>input:not([type=radio]), select {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 2rem;
+    margin-top: 2vh;
+    border-radius: 1px;
+    border-style: hidden;
+}
+
+form input[type=radio], label {
+    float: left;
+    margin: 1vh 1.25vw;
+}
+
+form input[type=radio] {
+    position: relative;
+    top: 1vh;
+}
+
+form button {
+    width: 100%;
+    margin-top: 2vh;
+    height: 4vh;
+    font-size: 1.5rem;
+    font-family: "hana";
+    background-color: rgba(255, 0, 0, 0);
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+#footer-page{
+    display: inline-block;
+    background-color: #fff;
+    width: 100vw;
+    height: 20vh;
+}
+
+#footer-page p{
+    font-size: 2rem;
+    display: inline-block;
+    margin-left: 15%;
+    text-align: center;
+}
+
+@keyframes button-rrr {
+    25% {
+        transform: rotateX(45deg);
+    }
+    50% {
+        transform: rotateX(-45deg);
+    }
+    75% {
+        transform: rotateX(45deg);
+    }
+    100% {
+        transform: rotateX(-45deg);
+    }
+}
+
+@keyframes scale-up {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event</title>
+        <meta charset="utf-8">
+        <style media="screen" type="text/css">
+            
+        </style>
+        <script type="text/javascript">
+            /*var color=["white","yellow","aqua","purple"];
+            var i=0;
+            function colorBig(){
+                i++;
+                if(i>=color.length){
+                    i=0;
+                }
+                var bodyTag=document.getElementsByTagName("body")[0];
+                bodyTag.style.backgroundColor=color[i];
+            }
+            window.onload=function(){
+                var btn2=document.getElementById("btn2");
+                btn2.onclick=function(){colorBig();}
+                
+                var btn4=document.getElementById("btn4");
+                btn4.onmouseover=function(){colorBig();}
+            }*/
+            function submit(myForm){
+                var reg1=/^[가-힣]{2,5}$/;
+                var reg2=/^(010|016|011)\d{3,4}\d{4}$/;
+                
+                var name=myForm.user_name;
+                var tel=myForm.user_tel;
+                var result1=reg1.test(name.value);
+                var result2=reg1.test(tel.value);
+                
+                if(!result1){
+                    alert("이름 입력이 잘못되었습니다.");
+                    name.value="";
+                    name.focus();
+                    return false;
+                }else if(!result2){
+                    alert("연락처 입력이 잘못되었습니다.");
+                    tel.value="";
+                    tel.focus();
+                    return false;
+                }
+            }
+            function reset(myForm){
+                var result=confirm("정말로 회원가입을 취소하시겠습니까?");
+                if(result){
+                    return false;
+                }
+            }
+        </script>
+    </head> 
+    <body onload="document.f1.user_name.focus();">
+        <form action="#" method="post" name="f1"
+              onsubmit="return submit(this);" onreset="return reset(this);">
+            <fieldset>
+                <legend>회원가입</legend>
+                <p>
+                    <label for="user_name">이름</label>
+                    <input type="text" name="user_name" id="user_name">
+                </p>
+                <p>
+                    <label for="user_name">연락처</label>
+                    <input type="text" name="user_tel" id="user_tel">
+                </p>
+                <p>
+                    <input type="submit" value="회원가입">
+                    <input type="reset" value="가입 취소">
+                </p>
+            </fieldset>
+        </form>        
+    </body>
+</html>

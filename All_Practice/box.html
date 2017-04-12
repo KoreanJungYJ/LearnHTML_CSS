@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>media</title>
+        <meta charset="utf-8">
+        <style media="screen" type="text/css">
+            #box{
+                width:200px;
+                height:200px;
+                background-color:coral;
+            } 
+        </style>
+        <script src="../jquery.js"></script>
+        <!--<script type="text/javascript">
+            $(document).ready(function(){
+                $("#panel").on("click",function(){
+                    $("#box").css({"fontsize":20
+                    });
+                });
+            })
+        </script>-->
+    </head>
+    <body>
+        <div id="box">
+            
+        </div>
+        <button id="panel" value="click" onclick="$('#box').css('background-color','red')">
+        </button>
+    </body>
+</html>

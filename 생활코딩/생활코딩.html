@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>opentutorials.org</title>
+    <style media="screen">
+        body {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        header {
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background-color: #4D749A;
+        }
+        
+        .toppart {
+            width: 100%;
+            height: 50px;
+            position: absolute;
+        }
+        
+        #s_title {
+            position: absolute;
+            font-weight: lighter;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        .Atags {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #s_title a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #green {
+            color: #20B540;
+        }
+        
+        #log {
+            margin-left: 155px;
+            margin-top: 15.5px;
+        }
+        
+        #login {
+            color: white;
+            font-size: 13px;
+            font-weight: lighter;
+            float: right;
+            margin-top: 22.5px;
+            margin-right: 35px;
+        }
+        
+        #tap {
+            padding-left: 20px;
+        }
+        
+        nav {
+            width: 100%;
+            height: 175px;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .title {
+            width: 100%;
+            height: 50px;
+            /*border:1px solid red;*/
+            margin-top: 30px;
+        }
+        
+        h1 {
+            color: white;
+            font-weight: 400;
+            font-size: 27.5px;
+            text-align: center;
+        }
+        
+        .deco {
+            text-decoration: none;
+        }
+        /*#subtitle{
+                position:absolute;
+                color:#C8C8C8;
+                font-weight:lighter;
+                margin-left:700px;
+                top:40px;
+            }*/
+        
+        #subtitle {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            color: #C8C8C8;
+            top: 40px;
+        }
+        
+        .maintags {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            /*border:2px solid red;*/
+        }
+        
+        .maintags ul {
+            position: absolute;
+            margin-top: 15px;
+            list-style-type: none;
+            left: 20.45%;
+            overflow: hidden;
+        }
+        
+        .maintags ul li {
+            float: left;
+        }
+        
+        .maintags ul li a {
+            text-decoration: none;
+            font-weight: lighter;
+            color: white;
+            margin-left: 30px;
+            display: block;
+            padding: 7.5px;
+            font-size: 14px;
+        }
+        
+        .maintags ul li a:hover {
+            color: #43D262;
+        }
+        
+        .explanation {
+            width: 100%;
+            height: 50px;
+            /*border:2px solid red;*/
+            position: absolute;
+            margin-top: 200px;
+            background-color: #E3E3E3;
+        }
+        
+        .subEx {
+            color: #A3A3A3;
+            font-size: 13px;
+            padding: 0;
+            line-height: 3.7;
+            margin-left: 20px;
+            position: relative;
+            left: 10%;
+        }
+        
+        section {
+            width: 1200px;
+            height: 1510px;
+            /*border:1px solid black;*/
+            position: absolute;
+            left: 10.5%;
+            top: 250px;
+        }
+        
+        article {
+            width: 80%;
+            height: 100%;
+            float: right;
+            border: 1px solid #DFDFE0;
+        }
+        
+        aside {
+            position: absolute;
+            width: 19.8%;
+            height: 100%;
+            float: left;
+            border: 1px solid #DFDFE0;
+        }
+        
+        #asideF {
+            background-color:#35D367;
+            width: 100%;
+            height: 38px;
+            font-size: 12.5px;
+        }
+        #coverpage{
+            color:white;
+            font-weight:600;
+            position:absolute;
+            margin-left:15px;
+            margin-top:10px;
+        }
+        .sidebar {
+            width: 100%;
+            height: 98%;
+            /*border:1px solid red;*/
+            border-top: 1px solid #DFDFE0;
+            position: absolute;
+            top: 38px;
+        }
+        
+        #sidetitle {
+            font-size: 14px;
+            font-weight: bolder;
+            margin-left: 14px;
+            position: absolute;
+            margin-top: 12.5px;
+        }
+        
+        .sidenames {
+            width: 100%;
+            height: 97%;
+        }
+        
+        .sidenames ul {
+            width: 80%;
+            height: 94%;
+            position: absolute;
+            /*border:2px solid gray;*/
+            right: 36px;
+        }
+        
+        .sidenames ul li {
+            list-style-type: none;
+            line-height: 3.15;
+            font-size: 12px;
+            /*color:#9D9D9D;*/
+            /*중복 코드*/
+        }
+        
+        .sidenames ul li a {
+            text-decoration: none;
+            color: #9D9D9D;
+        }
+        
+        .sidenames .tap {
+            margin-left: 20px;
+        }
+        
+        .sidenames .tapmore {
+            margin-left: 40px;
+        }
+        
+        .maintitle {
+            width: 80%;
+            height: 150px;
+            border-bottom: 1px solid black;
+            margin-top: 39px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        #firstTitle {
+            font-size: 30px;
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        #secondTitle {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            color: #AFAFAF;
+            font-size: 13px;
+            margin-top: 100px;
+        }
+        
+        .htmlvideo {
+            position: relative;
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 640px;
+            height: 360px;
+            border: 1px solid #AFAFAF;
+        }
+        
+        .Sub {
+            width: 66.8%;
+            top: 30px;
+            position: relative;
+            margin: 0 auto;
+            /*border:1px solid gray;*/
+            height: 350px;
+        }
+        
+        .description {
+            color: #4F4F4F;
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+        
+        #textfrom {
+            color: #33A6DF;
+            text-decoration: none;
+        }
+        
+        .secondSub {
+            position: relative;
+            margin: 0 auto;
+            width: 66.8%;
+            height: 350px;
+            margin-top: 50px;
+        }
+        
+        #HtmlCollection {
+            text-decoration: none;
+            color: #33A6DF;
+        }
+        
+        footer {
+            position: relative;
+            margin: 0 auto;
+            width: 78.99%;
+            height: 75px;
+            background-color: #E3E3E3;
+            top: 1761px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<script type="application/javascript" src="../jquery.js"></script>-->
+    <header>
+        <div class="toppart"> <span id="s_title">
+                      <a href="https://opentutorials.org/course/1"><span id="green">Open</span>tutorials.org</a>
+            </span> <img src="log.JPG" id="log"> <span id="login">
+                          <a href="https://opentutorials.org/auth?returnURL=https://opentutorials.org/course/1" class="Atags">로그인</a> 
+                          <span id="tap"><a href="https://opentutorials.org/module/180" class="Atags">도움말</a></span> </span>
+        </div>
+        <nav>
+            <div class="title"> <a href="https://opentutorials.org/course/1" class="deco"><h1>생활코딩</h1><br></a> <span id="subtitle">Coding Everyday</span> </div>
+            <div class="maintags">
+                <ul>
+                    <li> <a href="https://opentutorials.org/course/1688">웹 애플리케이션 만들기</a></li>
+                    <li> <a href="https://opentutorials.org/course/740">언어</a> </li>
+                    <li> <a href="https://opentutorials.org/course/668">클라이언트</a> </li>
+                    <li> <a href="https://opentutorials.org/course/669">서버</a> </li>
+                    <li> <a href="https://opentutorials.org/course/670">개발도구</a> </li>
+                    <li> <a href="https://opentutorials.org/course/301">프로젝트 관리</a> </li>
+                    <li> <a href="https://opentutorials.org/course/60">기타</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="explanation"> <span class="subEx">생활코딩 ></span> <span class="subEx"> 클라이언트 ></span> <span class="subEx"> JavaScript ></span> <span class="subEx"> 웹브라우저 자바스크립트</span> </div>
+    <section>
+        <article>
+            <div class="maintitle"> <span id="firstTitle">
+                       Object Model
+                   </span> <span id="secondTitle">
+                       2017-03-10 13:18
+                   </span> </div>
+            <div class="htmlvideo">
+                <video src="https://www.youtube.com/watch?v=VPb-MKwowHY" width="640" height="360" controls="controls" poster="back2.jpg"> </video>
+                <!--수정 필요!-->
+                <!--<video><iframe title="YouTube Video Player" class="yplayer"
+                    type="text/html" width="640" height="360" src="https://www.youtube.com/watch?v=f5qbupX_QL8" frameborder="0"
+                    allowFullScreen></iframe></video>-->
+            </div>
+            <div class="Sub"> <span class="description">
+                       웹브라우저의 구성요소들은 하나하나가 객체화되어 있다. 자바스크립트로 이 객체를 제어해서 웹 브라우저를 제어할 수 있게 된다. 이 객체들은 서로 계층적인 관계로 구조화되어 있다. BOM과 DOM은 이 구조를 구성하고 있는 가장 큰 틀의 분류라고 할 수 있다.<br><br>
+                       이 관계를 그림으로 나타내면 아래와 같다. (출처):<a href="http://learn.javascript.ru/browser-environment" id="textfrom" target="_blank"> http://learn.javascript.ru/browser-environment</a>
+                   </span> <img src="help.JPG" width="640" height="240"> </div>
+            <div class="secondSub">
+                <video src="https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU" width="640" height="360" controls="controls" poster="back3.jpg" autoplay="true"> </video>
+            </div>
+            <br>
+            <div class="Sub"> <span class="description">
+                        HTMLCollection은 리턴 결과가 복수인 경우에 사용하게 되는 객체다. 유사배열로 배열과 비슷한 사용방법을 가지고 있지만 배열은 아니다.<br><br><a href="#html" id="HtmlCollection">HTMLCollection</a><br><br>HTMLCollection의 목록은 실시간으로 변경된다.
+                    </span> </div>
+        </article>
+        <aside>
+            <div id="asideF"> <span id="coverpage">커버 페이지</span> </div>
+            <div class="sidebar"> <span id="sidetitle">토픽 목록</span>
+                <br>
+                <div class="sidenames">
+                    <ul>
+                        <li><a href="https://opentutorials.org/course/1375/6619">-웹브라우저와 JavaScript</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6639">-실습방법</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6620">-HTML에서 JavaScript 로드하기</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6622">-Object Model</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6628">-BOM</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6633">-전역객체 Window</a> </li>
+                        <!--class-->
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6632">-사용자와 커뮤니케이션 하기</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6634">-Location 객체</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6650">-Navigator 객체</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6651">-창 제어</a> </li>
+                        <!--class-->
+                        <li><a href="https://opentutorials.org/course/1375/6655">-DOM</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6656">-제어 대상을 찾기</a> </li>
+                        <!--class-->
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6630">-JQuery</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6658">-제어 대상을 찾기</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6665">-jQuery</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6666">-제어 대상을 찾기(jQuery)</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6670">-HTMLElement</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6681">-HTMLCollection</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6670">-jQuery 객체</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6681">-Element 객체</a> </li>
+                        <!--class-->
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6682">-식별자 API</a> </li>
+                        <!--class2-->
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6684">-조회 API</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6683">-속성 API</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6696">-jQuery 속성 제어 API</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6697">-jQuery 조회 범위 제한</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6698">-Node 객체</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6699">-Node 관계 API</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6700">-노드 종류 API</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6701">-노드 변경 API</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6743">-JQuery 노드 변경 API</a> </li>
+                        <li class="tapmore"><a href="https://opentutorials.org/course/1375/6738">-문자열로 노드 제어</a> </li>
+                        <!--class2-->
+                        <li><a href="https://opentutorials.org/course/1375/6740">-Document 객체</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6744">-Text 객체</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6745">-값 API</a> </li>
+                        <li class="tap"><a href="https://opentutorials.org/course/1375/6746">-조작 API</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/7112">-문서의 기하학적 특성</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6629">-이벤트</a> </li>
+                        <li><a href="https://opentutorials.org/course/1375/6763">-등록방법</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <footer> </footer>
+</body>
+
+</html>

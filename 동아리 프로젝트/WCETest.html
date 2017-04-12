@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Butcherman|Ceviche+One|Faster+One|Mate+SC" rel="stylesheet">
+    <title>WCE-Page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="WCE_Members">
+    <meta name="title" content="WCE:Web-Coding-Everyday">
+    <meta name="description" content="DSM No.1 웹 동아리">
+    <meta name="keywords" content="웹, Web, 프론트엔트, 백엔드">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="WCE-Page">
+    <meta property="og:title" content="DSM No.1 웹 동아리">
+    <meta property="og:description" content="DSM의 웹 동아리 WCE입니다! 기본적인 프로그래밍 언어를 기반으로 웹 프론트엔드 및 백엔드를 공부합니다. 여러 프로젝트 및 대회에 참가한 경험이 있고 앞으로도 열심히하여 DSM을 대표하는 동아리가 될 예정입니다.">
+    <script type="text/javascript">
+        /* 따로 js파일 만들어서 적용해주기 */
+        (function () {
+            function k(a, b, c) {
+                if (a.addEventListener) {
+                    a.addEventListener(b, c, false);
+                }
+                else {
+                    a.attachEvent && a.attachEvent("on" + b, c);
+                }
+            }
+
+            function g(a) {
+                if (typeof window.onload != "function") {
+                    window.onload = a;
+                }
+                else {
+                    var b = window.onload;
+                    window.onload = function () {
+                        b();
+                        a()
+                    }
+                }
+            }
+
+            function h() {
+                var a = {};
+                for (type in {
+                        Top: ""
+                        , Left: ""
+                    }) {
+                    var b = type == "Top" ? "Y" : "X";
+                    if (typeof window["page" + b + "Offset"] != "undefined") {
+                        a[type.toLowerCase()] = window["page" + b + "Offset"];
+                    }
+                    else {
+                        b = document.documentElement.clientHeight ? document.documentElement : document.body;
+                        a[type.toLowerCase()] = b["scroll" + type];
+                    }
+                }
+                return a
+            }
+
+            function l() {
+                var a = document.body
+                    , b;
+                if (window.innerHeight) {
+                    b = window.innerHeight;
+                }
+                else if (a.parentElement.clientHeight) {
+                    b = a.parentElement.clientHeight;
+                }
+                else if (a && a.clientHeight) {
+                    b = a.clientHeight;
+                }
+                return b
+            }
+
+            function i(a) {
+                this.parent = document.body;
+                this.createEl(this.parent, a);
+                this.size = Math.random() * 2 + 4;
+                this.el.style.width = Math.round(this.size) + "px";
+                this.el.style.height = Math.round(this.size) + "px";
+                this.maxLeft = document.body.offsetWidth - this.size;
+                this.maxTop = document.body.offsetHeight - this.size;
+                this.left = Math.random() * this.maxLeft;
+                this.top = h().top + 1;
+                this.angle = 1.4 + 0.3 * Math.random();
+                this.minAngle = 1.4;
+                this.maxAngle = 1.6;
+                this.angleDelta = 0.01 * Math.random();
+                this.speed = 3 + Math.random()
+            }
+            var j = false;
+            g(function () {
+                j = true;
+            });
+            var f = true;
+            window.createSnow = function (a, b) {
+                if (j) {
+                    var c = []
+                        , m = setInterval(function () {
+                            f && b > c.length && Math.random() < b * 0.0025 && c.push(new i(a));
+                            !f && !c.length && clearInterval(m);
+                            for (var e = h().top, n = l(), d = c.length - 1; d >= 0; d--)
+                                if (c[d])
+                                    if (c[d].top < e || c[d].top + c[d].size + 1 > e + n) {
+                                        c[d].remove();
+                                        c[d] = null;
+                                        c.splice(d, 1)
+                                    }
+                                    else {
+                                        c[d].move();
+                                        c[d].draw()
+                                    }
+                        }, 40);
+                    k(window, "scroll", function () {
+                        for (var e = c.length - 1; e >= 0; e--) {
+                            c[e].draw();
+                        }
+                    })
+                }
+                else {
+                    g(function () {
+                        createSnow(a, b)
+                    });
+                }
+            };
+            window.removeSnow = function () {
+                f = false;
+            };
+            i.prototype = {
+                createEl: function (a, b) {
+                    this.el = document.createElement("img");
+                    this.el.setAttribute("src", b + "./img/snow" + Math.floor(Math.random() * 4) + ".gif");
+                    this.el.style.position = "absolute";
+                    this.el.style.display = "block";
+                    this.el.style.zIndex = "99999";
+                    this.parent.appendChild(this.el)
+                }
+                , move: function () {
+                    if (this.angle < this.minAngle || this.angle > this.maxAngle) {
+                        this.angleDelta = -this.angleDelta;
+                    }
+                    this.angle += this.angleDelta;
+                    this.left += this.speed * Math.cos(this.angle * Math.PI);
+                    this.top -= this.speed * Math.sin(this.angle * Math.PI);
+                    if (this.left < 0) {
+                        this.left = this.maxLeft;
+                    }
+                    else if (this.left > this.maxLeft) {
+                        this.left = 0;
+                    }
+                }
+                , draw: function () {
+                    this.el.style.top = Math.round(this.top) + "px";
+                    this.el.style.left = Math.round(this.left) + "px";
+                }
+                , remove: function () {
+                    this.parent.removeChild(this.el);
+                    this.parent = this.el = null;
+                }
+            }
+        })
+        ();
+    </script>
+    <script>
+        createSnow('./', 1000);
+        //------------ ./는 이미지 경로, 1000는 눈 갯수(숫자가 크면 클수록 폭설이 내립니다.)
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Outline" rel="stylesheet">
+    <style media="screen" type="text/css">
+        * {
+            -ms-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -o-box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            height: 2500px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        header {
+            width: 100%;
+            height: 750px;
+            background: url(winter.jpg);
+        }
+        
+        .Black_Wrap_Box {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .Black_Wrap_Box .MainPart1 {
+            width: 100%;
+            height: 150px;
+            /*background-color:red;*/
+            position: absolute;
+            margin-top: 270px;
+        }
+        
+        .MainPart1 #Title {
+            font-family: 'Bungee Outline', cursive;
+            font-weight: bold;
+            font-size: 100px;
+            display: block;
+            animation-name: title;
+            animation-duration: 2.5s;
+            /*animation-duration: 1.5s;*/
+            /*animation-fill-mode: backwards;*/
+            animation-fill-mode: forwards;
+        }
+        
+        .MainPart1 #SubTitle {
+            display: block;
+            position: absolute;
+            margin-top: 180px;
+            font-size: 20px;
+            font-family: 'Audiowide', cursive;
+            animation-name: subtitle;
+            animation-duration: 2s;
+            animation-delay: 1.25s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        
+        @keyframes title {
+            from {
+                position: absolute;
+                margin-left: 75px;
+                opacity: 0;
+                color: black;
+                text-shadow: 0px 1px #ffffff, 7.5px 7.5px 7.5px white;
+            }
+            to {
+                position: absolute;
+                margin-left: 640px;
+                opacity: 1;
+                color: white;
+                text-shadow: 0px 1px #ffffff, 7.5px 7.5px 7.5px black;
+                letter-spacing: 30px;
+            }
+        }
+        
+        @keyframes subtitle {
+            from {
+                position: absolute;
+                margin-left: 75px;
+                opacity: 0;
+                color: black;
+                text-shadow: 0px 1px #ffffff, 3px 3px 3px white;
+            }
+            to {
+                position: absolute;
+                margin-left: 643px;
+                opacity: 1;
+                color: white;
+                text-shadow: 0px 1px #ffffff, 3px 3px 3px black;
+                letter-spacing: 1.5px;
+                font-weight:lighter;
+            }
+        }
+        .img{
+            width:100%;
+            height:150px;
+            position:absolute;
+            margin-top:180px;
+            text-align: center;
+        }
+        #logo{
+            width:135px;
+            margin-left:55px;
+            margin-top:5px;
+            animation-name:logo;
+            animation-duration: 2s;
+            opacity:0;
+            animation-fill-mode:forwards;
+        }
+        @keyframes logo{
+            from{
+               opacity:0; 
+            }
+            to{
+               opacity:1;
+               transform:rotate(360deg);
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="Black_Wrap_Box">
+            <div class="img">
+               <img src="../WCEPAGE/WCE-Logo-White.png" id="logo"> 
+            </div>
+            <div class="MainPart1">
+                <span id="Title">WCE</span>
+                <span id="SubTitle">Web Coding Everyday</span>
+            </div>
+        </div>
+    </header>
+    <section>
+        <article>
+        </article>
+    </section>
+    <footer> 
+    </footer>
+</body>
+
+</html>

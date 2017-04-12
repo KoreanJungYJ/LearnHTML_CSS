@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>pong</title>
+        <link rel="stylesheet" type="text/css" href="complete.html" media="screen"/>
+        <style media="screen">
+            
+            body{
+                width:1000px;
+                height:750px;
+                margin:0 auto;
+                position:relative;
+            }
+            .bar{
+                width:750px;
+                height:200px;
+                position:absolute;
+                margin-left:125px;
+                bottom:0;
+                background-color: darkgrey;
+            }
+            #fish{
+                width:30%;
+                float:right;
+                margin-top:350px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="complete.js"></script>
+        <div class="bar">
+            
+        </div>
+        <div id="panel">
+            <div id="bar"></div>
+            <img src="fish.png" id="fish">
+        </div>
+        
+        <div id="nav">
+            <button id="btnStart">물고기 움직이기</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../jquery.js"></script>
+        <title>JS</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body{
+                width:1000px;
+                height:2000px;
+                background-color:black;
+                position:absolute;
+            }
+            #box{
+                width:100px;
+                height:100px;
+                background-color:coral;
+            }
+        </style>
+        <script type="text/javascript">
+            function foo(){
+                $("body").css("bottom","0px");
+            }
+        </script>
+    </head>
+    <body>
+       <div id="box" onclick="foo();"></div>
+        
+        
+    </body>
+</html>

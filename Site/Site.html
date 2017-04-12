@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Html 게시판</title>
+    <style media="screen">
+        body {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        a {
+            color: gray;
+        }
+        ul li:hover{
+          color:yellow;
+        }
+        h1,#titleEx {
+            color: rgba(0, 0, 255, 0.7);
+            font-weight: bold;
+        }
+
+        #cover {
+            width: 960px;
+            height: 35px;
+            background-color: lightblue;
+            border-top: 3px solid black;
+        }
+
+        .coverFont {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 1);
+            font-weight: bolder;
+            padding-left: 25px;
+            padding-top: 10px;
+            float: left;
+            list-style-type: none;
+        }
+
+        .fTos {
+            width: 972px;
+            border: 1px solid gray;
+            float:left;
+            padding-top:15px;
+            margin-top:10px;
+        }
+        .fSize{
+          font-weight:bolder;
+          padding-bottom:10px;
+        }
+        .fSize2{
+          font-size:12px;
+        }
+        .font{
+          color:rgba(0, 255, 0, 0.8);
+          font-size:12px;
+          font-weight: bolder;
+        }
+        #img1{
+          width:100px;
+        }
+        /*#menus{
+          width:100%;
+        }
+        #menus>div{
+          position:relative;
+          height:350px;
+          border:1px solid black;
+          margin-bottom:15px;
+        }
+        #pic1, #pic2, #pic3, #pic4, #pic5{
+          width:90%;
+        }*/
+        #pic1{
+          background-repeat: no-repeat;
+          background-size:cover;
+          margin-top:20px;
+          padding-top:20px;
+        }
+        #pic2{
+          background-repeat: no-repeat;
+          background-size:cover;
+          float:right;
+        }
+        #pic3{
+          background-repeat: no-repeat;
+          background-size:cover;
+        }
+        #pic4{
+          background-repeat: no-repeat;
+          background-size:cover;
+        }
+        #pic5{
+          background-repeat: no-repeat;
+          background-size:cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>
+            <h1>Do it! HTML5</h1>
+            <span id="titleEx">새로운 시대를 여는 표준 웹기술</span>
+            <br>
+            <a href="http://cafe.naver.com/doithtml5" target="_blank">http://cafe.naver.com/doithtml5</a>
+        </p>
+        <ul id="cover">
+            <li class="coverFont">전체글보기</li>
+            </span>
+            <li class="coverFont">공지사항</li>
+            </span>
+            <li class="coverFont">게시판</li>
+            </span>
+            <li class="coverFont">Q/A 게시판</li>
+            </span>
+            <li class="coverFont">솜씨자랑</li>
+            </span>
+        </ul>
+    </header>
+
+    <section>
+      <article>
+        <fieldset class="fTos">
+          <legend class="font">안내</legend>
+            <p><img src="cafe.png" alt="카페" id="img1"/>
+              <span class="fSize">[안내]-</span><span class="fSize2">내가 쓴 게시글, 이젠 지워져도 안심!</span>
+            </p>
+        </fieldset>
+        <fieldset class="fTos">
+          <legend class="font">안내</legend>
+            <p>
+              <span class="fSize2">카페서비스 2월 업데이트 소식을 알려드립니다!</span>
+            </p>
+        </fieldset>
+      </article>
+
+      <article id="menus">
+        <div id="pic1">
+          <img src="android.jpg" alt="">
+        </div>
+        <div id="pic2">
+          <img src="css.jpg" alt="">
+        </div>
+        <div id="pic3">
+          <img src="hadub.jpg" alt="">
+        </div>
+        <div id="pic4">
+          <img src="python.jpg" alt="">
+        </div>
+        <div id="pic5">
+          <img src="react.jpg" alt="">
+        </div>
+      </article>
+    </section>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

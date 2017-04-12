@@ -1,0 +1,13 @@
+-ms-, -moz-, -webkit-, -o- 브라우저 고려
+<meta charset="utf-8">
+        <meta name="author" content="WCE_Members">
+        <meta name="title" content="WCE:Web-Coding-Everyday">
+        <meta name="description" content="DSM 1st 웹 동아리">
+        <meta name="keywords" content="웹, Web, 프론트엔트, 백엔드">
+
+*{
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}

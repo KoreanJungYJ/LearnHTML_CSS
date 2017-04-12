@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Brown</title>
+        <style medis="screen" type="text/css">
+            .BrownAll{
+                position:relative;
+                margin:0 auto;
+                width:1100px;
+                height:500px;
+                background-color:#FFD992;
+            } 
+            .ear{
+                position:absolute;
+                width:275px;
+                height:70px;
+                /*background-color:white;*/
+                margin-left:412.5px;
+                margin-top:70px;
+                z-index:1;
+                
+            }
+            .ear_left{
+                width:60px;
+                height:60px;
+                border-radius:100%;
+                background-color:#57342A;
+                position:absolute;
+                top:16.5px;
+                margin-left:20px;
+            }
+            .ear_right{
+                width:60px;
+                height:60px;
+                border-radius:100%;
+                background-color:#57342A;
+                position:absolute;
+                margin-left:193px;
+                top:16.5px;
+            }
+            .ear .ear_cover{
+                width:45%;
+                height:45%;
+                border-radius:100%;
+                background-color:#361B13;
+                margin-left:16.5px;
+                margin-top:18px;
+            }
+            .face{
+                position:absolute;
+                width:300px;
+                height:275px;
+                background-color:#57342A;
+                margin:100px;
+                margin-left:400px;
+                border-radius: 100%;
+                z-index: 9999;
+            }
+            .face .eyes{
+                width:82.5px;
+                height:35px;
+                margin-top:100px;
+                margin-left:106px;
+            }
+            .eyes .eyes_left{
+                width:30px;
+                height:30px;
+                background-color:black;
+                border-radius: 100%;
+                display:inline-block;
+            }
+            .eyes .eyes_right{
+                width:30px;
+                height:30px;
+                background-color:black;
+                position:absolute;
+                margin-left:55px;
+                top:100px;
+                border-radius:100%;
+            }
+            .NoseAndMouse{
+                position:absolute;
+                width:70px;
+                height:90px;
+                background-color:#BFBFBF;
+                border-radius:100px;
+                margin-left:113.75px;
+                top:125px;
+            }
+            .nose{
+                width:27px;
+                height:30px;
+                background-color:black;
+                /*border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;*/
+                border-radius: 17px 17px 25px 25px;
+                margin-left:21px;
+                margin-top:7px;
+            }
+            .mouse{
+                width:100%;
+                height:50px;
+                /*background-color:white;*/
+            }
+            .mouse .topline{
+                width:4.5px;
+                height:20px;
+                background-color:black;
+                margin-left:31.5px;
+            }
+            .mouse .bottomline{
+                width:25px;
+                height:25px;
+                transform: rotate(45deg);
+                border-top:4.5px solid black;
+                border-left:4.5px solid black;
+                margin-left:19.45px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="BrownAll">
+            <div class="ear">
+               <div class="ear_left">
+                   <div class="ear_cover"></div>
+               </div>
+                <div class="ear_right">
+                    <div class="ear_cover"></div>
+                </div>
+            </div>
+            <div class="face">
+                <div class="eyes">
+                   <div class="eyes_left"></div>
+                   <div class="eyes_right"></div>
+                </div>
+                <div class="NoseAndMouse">
+                    <div class="nose">
+                        
+                    </div>
+                    <div class="mouse">
+                       <div class="topline"></div>
+                        <div class="bottomline"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

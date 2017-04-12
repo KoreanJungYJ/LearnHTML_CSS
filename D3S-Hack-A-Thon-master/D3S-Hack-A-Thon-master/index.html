@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>D3S Hack A Thon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div id="side-navigation" hidden="true">
+        <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+        <ul>
+            <li class="nav-li" onclick="scrollPage(this)"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<span>main</span></li>
+            <li class="nav-li" onclick="scrollPage(this)"><i class="fa fa-commenting"></i>&nbsp;<span>intro</span></li>
+            <li class="nav-li" onclick="scrollPage(this)"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;<span>apply</span></li>
+            <li class="nav-li" onclick="scrollPage(this)"><i class="fa fa-balance-scale" aria-hidden="true"></i>&nbsp;<span>judge</span></li>
+            <li class="nav-li" onclick="scrollPage(this)"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;<span>subject</span></li>
+            <li class="nav-li" onclick="scrollPage(this)"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;<span>agenda</span></li>
+            <li class="nav-li" onclick="scrollPage(this)"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;<span>participate</span></li>
+        </ul>
+    </div>
+
+    <div class="views" id="main-page">
+        <div id="background-cover">
+            <div id="title">
+                D3S Hack A Thon
+            </div>
+            <div id="start">
+                START!
+            </div>
+        </div>
+    </div>
+
+    <div class="views" id="intro-page">
+        <span id="intro">intro</span>
+        <div id="intro-desc">
+            바야흐로 2015년 12월 24일 <br> 서울 선릉 D.CAMP에서는 9XD 송년회가 열렸다....!<br> 그때 한 자리에 모이게된 디미고, 선린고, 대마고!<br> 우리는 서로 학교간의 교류를 원하였고 그렇게 해커톤을 진행하게되는데...<br>
+        </div>
+    </div>
+
+    <div class="views" id="apply-page">
+        <div id="apply-cover">
+            <div id="apply-form">
+                <h1>APPLY</h1>
+                <h1><br><br><br><br>아직 접수기간이 아닙니다.</h1>
+                <!--<form class="" action="index.html" method="post">-->
+                    <!--<label for="male">남자</label><input type="radio" name="sex" class="sex" value="male" checked id="male">-->
+                    <!--<label for="female">여자</label><input type="radio" name="sex" class="sex" value="female" id="female">-->
+                    <!--<input type="text" name="name" maxlength="20" placeholder="이름">-->
+                    <!--<select name="school">-->
+                        <!--<option value="daeduk">대덕SW마이스터고등학교</option>-->
+                        <!--<option value="daegu">대구소프트웨어고등학교</option>-->
+                        <!--<option value="digital">디지털미디어고등학교</option>-->
+                        <!--<option value="sunrin">선린인터넷고등학교</option>-->
+                    <!--</select>-->
+                    <!--<select name="grade">-->
+                        <!--<option value="1">1학년</option>-->
+                        <!--<option value="2">2학년</option>-->
+                        <!--<option value="3">3학년</option>-->
+                    <!--</select>-->
+                    <!--<input type="email" name="email" placeholder="이메일">-->
+                    <!--<input type="text" name="phone" placeholder="전화번호">-->
+                    <!--<button type="button" name="submit">확인</button>-->
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="views" id="judge-page">
+        <h1 style="position:relative;top:5vh;">Judge</h1>
+
+        <div id="judge-list">
+            <div class="judge-li">
+                <div class="judge-cover">
+                    <span>9XD <br> 진유림 님</span>
+                </div>
+            </div>
+
+            <div class="judge-li">
+                <div class="judge-cover">
+                    <span>CodeSquad <br> 이수진 님</span>
+                </div>
+            </div>
+
+            <div class="judge-li">
+                <div class="judge-cover">
+                    <span>GDG SSU <br> 임원균 님</span>
+                </div>
+            </div>
+
+            <div class="judge-li">
+                <div class="judge-cover">
+                    <span>DSM <br> 최부영 교장선생님</span>
+                </div>
+            </div>
+
+            <div class="judge-li">
+                <div class="judge-cover">
+                    <span>국민대학교 <br> 이민석 교수님</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="views" id="subject-page">
+        <div id="subject-content">
+            <h1>SUBJECT</h1>
+            <ul id="subject-list">
+                <li><img src="imgs/account-multiple.png" alt="">Family</li>
+                <li><img src="imgs/city.png" alt="">School</li>
+                <li><img src="imgs/ic_accessible_black_24dp_2x.png" alt="">Handicapped</li>
+                <li><img src="imgs/subway-variant.png" alt="">Transportation</li>
+                <li><img src="imgs/city.png" alt="">Free Subject</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="views" id="agenda-page">
+        <h1 style="position:relative;top:5vh;">AGENDA</h1>
+        <table class="agenda-table">
+            <tr>
+                <td colspan="2" style="font-size:2rem; text-align:center"> 2 / 4</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td>Regist/ Photo booth</td>
+            </tr>
+            <tr>
+                <td>12:00</td>
+                <td>KeyNote</td>
+            </tr>
+            <tr>
+                <td>12:20</td>
+                <td>30s Self introduce</td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td>Team build / Select Topic</td>
+            </tr>
+            <tr>
+                <td>13:10</td>
+                <td>Ice breaking and meeting each Team</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>Presantation Plan of Program</td>
+            </tr>
+
+        </table>
+        <table class="agenda-table">
+            <tr>
+                <td colspan="2" style="font-size:2rem;text-align:center"> 2 / 5 </td>
+            </tr>
+            <tr>
+                <td>14:30</td>
+                <td>Program booth or presantation</td>
+            </tr>
+            <tr>
+                <td>15:30 </td>
+                <td>result announcement and take photo</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Networking</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="views" id="participate-page">
+        <div id="school-intro-background">
+            <div id="content">
+                <h1 style="font-size:3rem;text-align:center">PARTICIPATED SCHOOL</h1>
+                <div class="school-column">
+                    <img src="imgs/digital.png" class="school-logos"><br> 디지털 미디어 고등학교
+                </div>
+                <div class="school-column">
+                    <img src="imgs/DSM.png" class="school-logos"><br> 대덕 SW마이스터 고등학교
+                </div>
+                <div class="school-column">
+                    <img src="imgs/daegu.png" class="school-logos"><br> 대구 소프트웨어 고등학교
+                </div>
+                <div class="school-column">
+                    <img src="imgs/sunrin.png" class="school-logos"><br> 선린 인터넷 고등학교
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer-page">
+        <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i><br>Developer : RIver-Stone-Jin <br> 010-2040-9281</p>
+        <p><i class="fa fa-envelope" aria-hidden="true"></i><br><br>sukjinjjang@gmail.com</p>
+    </div>
+
+</body>
+
+</html>

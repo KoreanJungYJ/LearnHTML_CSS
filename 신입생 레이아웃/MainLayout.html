@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>신입생 레이아웃</title>
+        <meta charset="utf-8">
+        <style media="screen" type="text/css">
+            @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+            *{
+                box-sizing:border-box;
+            } 
+            body{
+                width:100vw;
+                height:100vh;
+                position:relative;
+                margin:0 auto;
+                background:url(back4.jpg) no-repeat center center fixed;
+            }
+            header{
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color:rgba(0,0,0,0.45);
+            }
+            #font{
+                font-family: "Open Sans", Helvetica, sans-serif;
+                font-weight:bold;
+                text-transform: uppercase;
+                color:white;
+                font-size:3.5em;
+                text-align: center;
+                margin-top:225px;
+                letter-spacing:3px;
+            }
+            #blackbox{
+                width:100%;
+                height:17.5%;
+                background-color:rgba(0,0,0,0.7);
+                position:absolute;
+                bottom:0;
+            }
+            #font2{
+                color:white;
+                font-weight:bold;
+                text-align: center;
+                word-spacing: 5px;
+                margin-top:3.5px;
+            }
+            #black{
+                position:absolute;
+                top:0;
+                width:100%;
+                height:12.5%;
+                background-color:rgba(0,0,0,0.7);
+            }
+            #box{
+                position:absolute;
+                width:90px;
+                height:45px;
+                border:5px solid lightblue;
+                border-top:5px solid aqua;
+                border-left:5px solid aqua;
+                right:190px;
+                display:inline-block;
+                top:25px;
+                border-radius: 5px;
+            }
+            #white{
+                color:white;
+                font-weight:bold;
+                display:block;
+                margin-top:5px;
+                margin-left:15.35px;
+                font-family: "Open Sans", Helvetica, sans-serif;
+            }
+            #white2{
+                color:white;
+                font-weight:bold;
+                display:block;
+                margin-top:5px;
+                margin-left:15px;
+                font-family: "Open Sans", Helvetica, sans-serif;
+            }
+            #box2{
+                width:100px;
+                height:45px;
+                border:5px solid lightgreen;
+                border-right:5px solid aquamarine;
+                border-bottom:5px solid aquamarine;
+                right:50px;
+                top:25px;
+                position:absolute;
+                border-radius:5px;
+            }
+            @font-face{
+                font-family: 'DS-DIGIB';
+                src:url('DS-DIGIB.ttf') format('truetype');
+            }
+            #countdown{
+                color:white;
+                letter-spacing:10px;
+                font-size:4.6em;
+                text-align: center;
+                margin-top:20px;
+                font-weight:bold;
+                font-family:DS-DIGIB;
+            }
+            #imgcover{
+                position:absolute;
+                top:0;
+                left:0;
+                width:250px;
+                height:90px;
+            }
+            #image{
+                width:100%;
+                margin-top:21px;
+                margin-left:17px;
+            }
+        </style>
+    </head>
+    <body>
+       <header>
+          <div id="black">
+              <div id="imgcover"><img src="DSM%20Logo.png" id="image"></div>
+              <div id="box"><span id="white">Log-in</span></div>
+              <div id="box2"><span id="white2">Sign-Up</span></div>
+          </div>
+          <div id="font">welcome to dsm</div>
+           <div id="font2">안녕하세요, 신입생 여러분! DSM 입학전형 홈페이지 입니다.</div>
+          <div id="blackbox"></div>
+           <div id="countdown"></div>
+       </header>
+        <script type="text/javascript">
+            function countdown( elementId, seconds ){
+                var element, endTime, hours, mins, msLeft, time;
+
+    function updateTimer(){
+    msLeft = endTime - (+new Date);
+    if ( msLeft < 0 ) {
+      console.log('done');
+    } else {
+      time = new Date( msLeft );
+      hours = time.getUTCHours();
+      mins = time.getUTCMinutes();
+      element.innerHTML = (hours ? hours + ':' + ('0' + mins).slice(-2) : mins) + ':' + ('0' + time.getUTCSeconds()).slice(-2);
+      setTimeout( updateTimer, time.getUTCMilliseconds());
+      // if you want this to work when you unfocus the tab and refocus or after you sleep your computer and come back, you need to bind updateTimer to a $(window).focus event^^
+    }
+  }
+
+  element = document.getElementById( elementId );
+  endTime = (+new Date) + 1000 * seconds;
+  updateTimer();
+}
+
+countdown('countdown', 86400);
+        </script>
+    </body>
+</html>

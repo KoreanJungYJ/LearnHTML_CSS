@@ -1,0 +1,38 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+//            function person(name){
+//                this.name=name;
+//            }
+//            person.prototype.getName=function(){
+//                return this.name;
+//            };
+//            
+//            var foo=new person('yunjae');
+//            console.log(foo.getName());
+//            person.prototype.name='person';
+//            
+//            console.log(person.prototype.getName());
+            function person(name){
+                this.name=name;
+            }
+            console.log(person.prototype.constructor);
+            
+            var foo=new person('foo');
+            console.log(foo.country);
+            
+            person.prototype={
+                country: 'korea',
+            };
+            console.log(person.prototype.constructor);
+            
+            var bar=new person('bar');
+            console.log(foo.country);
+            console.log(bar.country);
+            console.log(foo.constructor);
+            console.log(bar.constructor);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+        body{
+            background-color:lightblue;
+        }
+        
+        .mainfont {
+            font-family: "Open Sans", Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 6em;
+            text-align: center;
+            margin:0 auto;
+            width: 100vw;
+            letter-spacing: 10px;
+            animation-name: font;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            color:white;
+            opacity:0;
+            
+            margin-top:305px;
+        }
+        
+        @keyframes font {
+            from {
+                opacity: 0;
+                color:gray;
+                text-shadow: 0px 1px #ffffff, 0.75px 0.75px 0.75px aqua;
+            }
+            to {
+                opacity: 1;
+                text-shadow: 0px 1px #ffffff, 2px 2px 2px aqua;
+                letter-spacing: 40px;
+            }
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+ 
+    <div class="mainfont">RHYTHM</div>
+
+</body>
+
+</html>

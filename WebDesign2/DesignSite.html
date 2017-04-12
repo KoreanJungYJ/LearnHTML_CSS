@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PURE MIX</title>
+    <meta charset="utf-8">
+    <style media="screen" type="text/css">
+        body {
+            position: relative;
+            margin: 0 auto;
+            width: 70%;
+            height: 1700px;
+            /*border:1px solid gray; 배경 틀     */
+        }
+        
+        header {
+            position: absolute;
+            width: 100%;
+            height: 775px;
+            /*border-bottom: 2px solid aqua;*/
+            /*전체 header 부분*/
+        }
+        
+        .Header_Title {
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            /*border-bottom: 1px solid lightblue;*/
+            /*맨 위 title부분*/
+        }
+        
+        .Header_Title #MainTitle {
+            position: absolute;
+            width: 200px;
+            height: 57px;
+            text-transform: uppercase;
+            letter-spacing: 7.5px;
+            font-weight: bolder;
+            font-size: 20px;
+            display: inline-block;
+            padding: 22.5px 0px 0px 45px;
+            transition-timing-function: linear;
+            transition: 2s;
+        }
+        
+        #MainTitle:hover {
+            background-color: #4B4B4B;
+            color: snow;
+            text-shadow: 0px 1px #ffffff, 2px 2px 2px aqua;
+            /*li tag할 때 다시 쓰자*/
+            width: 57.8%;
+            padding-left: 449px;
+        }
+        
+        .Header_Image {
+            position: absolute;
+            width: 100%;
+            height: 570px;
+            /*border-bottom: 2px solid coral;*/
+            /*header Image 부분 */
+            /*background-color:lightgreen;*/
+            margin-top: 80px;
+        }
+        
+        .Header_Image #Background_Image {
+            background-size: cover;
+            width: 100%;
+            height: 570px;
+        }
+        
+        .Header_Image #Image_Cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            /*border:2px solid lightgreen; 테두리 임의의 값
+                border-radius:10px;*/
+            top: 0;
+        }
+        
+        .Header_Image #Summary_Cover {
+            /* 제목 박스  */
+            position: relative;
+            margin: 0 auto;
+            width: 45%;
+            height: 35%;
+            background-color: coral;
+            bottom: 475px;
+        }
+        
+        .Header_Image #Summary_Cover .Site_Summary {
+            position: relative;
+            width: 95%;
+            height: 90%;
+            background-color: rgba(255, 255, 255, 0.9);
+            /*test code*/
+            margin: 0 auto;
+            top: 10px;
+        }
+        
+        .Site_Summary #Site_Title {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 3.5px;
+            margin-top: 50px;
+        }
+        
+        .Site_Summary #Site_Title2 {
+            width: 100%;
+            color: #969696;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: lighter;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+        
+        .Menu_Tags {
+            position: absolute;
+            width: 100%;
+            height: 125px;
+            border-bottom: 3px solid #393939;
+            bottom: 0px;
+            border-top: 1px solid white;
+        }
+        
+        .Menu_Tags ul {
+            position: absolute;
+            list-style: none;
+            left: 87.5px;
+        }
+        
+        .Menu_Tags li {
+            float: left;
+            padding-left: 85px;
+            padding-top: 30px;
+        }
+        
+        .Menu_Tags li a {
+            color: black;
+            text-decoration: none;
+            text-shadow: 0px 1px #ffffff, 2px 2px 2px gray;
+            font-size: 18px;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        
+        .Menu_Tags a:hover {
+            color: aqua;
+        }
+        
+        section {
+            width: 113%;
+            height: 800px;
+            position: relative;
+            /*border:2px solid black;*/
+            top: 800px;
+            right: 70.5px;
+        }
+        
+        .Top_Images {
+            /* 코드 추후 수정 필요 */
+            display: inline-block;
+            width: 25%;
+            height: 45%;
+        }
+        
+        .Top_Images #Top_Tap2 {
+            margin-left: 100px;
+        }
+        
+        .Top_Images #Top_Tap3 {
+            margin-left: 200px;
+        }
+        
+        .Bottom_Images {
+            margin-top: 10px;
+            margin-left: 405px;
+            display: inline-block;
+            width: 25%;
+            height: 45%;
+        }
+        
+        #Bottom_Image_One {
+            position: absolute;
+            /*display:block;*/
+            /*기본 값 block 다시 강조 */
+            width: 25%;
+            height: 45%;
+            margin-top: 10px;
+        }
+        
+        #Bottom_Tap {
+            position: absolute;
+            right: 89.5px;
+        }
+        /* 여기까지 */
+        
+        footer {
+            /*푸터 태그 공부도 하자*/
+            width: 113.05%;
+            height: 250px;
+            background-color: black;
+            position: relative;
+            margin-top: 840px;
+            right: 72.5px;
+        }
+        
+        .Footer_Last_Se {
+            color: white;
+            text-align: center;
+            font-size: 13.5px;
+            padding-top: 110px;
+        }
+    </style>
+</head>
+<!-- <form action="http://login/php"></form>-->
+
+<body>
+    <header>
+        <div class="Header_Title"> <a href="../Website/website.html" style="color:black"><span id="MainTitle">pure mix</span></a> </div>
+        <div class="Header_Image"> <img src="back2.jpg" id="Background_Image">
+            <div id="Image_Cover"></div>
+            <div id="Summary_Cover">
+                <div class="Site_Summary"> <span id="Site_Title">lorem ipsum dolor</span> <span id="Site_Title2">six html pages included</span> </div>
+            </div>
+        </div>
+        <nav>
+            <!-- 메뉴 태그 li로 설정하자 -->
+            <div class="Menu_Tags">
+                <ul>
+                    <li><a href="#all">all</a></li>
+                    <li><a href="#login">login</a></li>
+                    <li><a href="#style">style</a></li>
+                    <li><a href="#photos">photos</a></li>
+                    <li><a href="#mypage">branding</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <!--사진 배치와 관련하여 position및 display이해도가 떨어지는 것 같다-->
+        <article>
+            <div class="Top_Images">
+                <a href="#pic1"><img src="pic1.JPG" id="Top_Tap1"></a>
+            </div>
+            <div class="Top_Images">
+                <a href="#pic2"><img src="pic2.JPG" id="Top_Tap2"></a>
+            </div>
+            <div class="Top_Images">
+                <a href="#pic3"><img src="pic3_1.JPG" id="Top_Tap3"></a>
+            </div>
+            <div id="Bottom_Image_One">
+                <a href="#pic4"><img src="pic4.JPG"></a>
+            </div>
+            <div class="Bottom_Images">
+                <a href="#pic5"><img src="pic5_2.JPG"></a>
+            </div>
+            <div class="Bottom_Images" id="Bottom_Tap">
+                <a href="#pic6"><img src="pic6_2.JPG"></a>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="Footer_Last_Se"> Copyright @2017 Your Company Name-Designed By JYJ </div>
+    </footer>
+</body>
+
+</html>

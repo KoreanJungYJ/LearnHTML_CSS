@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AnimationTest1</title>
+        <meta charset="utf-8">
+        <style media="screen" type="text/css">
+            @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+            body{
+                background-color:#7376C9;
+            }
+            .box{
+                width:13.2vw;
+                height:13.2vw;
+                /*border:30px solid white;*/
+                margin:0 auto;
+                margin-top:33vh;
+                transform:rotate(-45deg);
+                animation-name:box;
+                animation-duration:4.5s;
+                animation-fill-mode:forwards;
+            }
+            @keyframes box{
+                20%{
+                   border-right-width:30px solid white;
+                   transform:rotate(0deg);    
+                }
+                40%{
+                   border-bottom-width:30px solid white;
+                   transform:rotate(0deg);    
+                }
+                60%{
+                    border-left-width:30px solid white;
+                    transform:rotate(0deg);
+                }
+                80%{
+                    border-top-width:30px solid white;
+                    transform:rotate(0deg);
+                }
+                100%{
+                    border:30px solid white;
+                    transform:rotate(-405deg);
+                }
+            }
+            #DSM{
+                color:white;
+                display:block;
+                transform:rotate(45deg);
+                margin-left:27px;
+                margin-top:80px;
+                font-size:3em;
+                font-family: "Open Sans", Helvetica, sans-serif;
+                font-weight: bold;
+                opacity:0;
+                animation-name:font;
+                animation-delay:4.5s;
+                animation-duration:2.5s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes font{
+                from{
+                    opacity:0;
+                }
+                to{
+                    opacity:1;
+                    letter-spacing: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+       <div class="box">
+           <span id="DSM">DSM</span>
+       </div> 
+    </body>
+</html>

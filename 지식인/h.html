@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <style>
+/*
+            #box{
+                border-top:200px solid black;
+                border-left:35px solid transparent;
+                border-right:35px solid transparent;
+                height:0;
+                width:300px;
+                margin-left:300px;
+            }
+            #box2{
+                border-bottom:200px solid black;
+                border-left:35px solid transparent;
+                
+                height:0;
+                width:200px;
+                margin-left:100px;
+                position: absolute;
+                top:8px;
+                right:650px;
+            }
+            #box3{
+                border-bottom:200px solid black;
+                border-right:35px solid transparent;
+                
+                height:0;
+                width:200px;
+                margin-left:100px;
+                position: absolute;
+                top:8px;
+                left:0px;
+            }
+*/
+            #box1{
+                margin-left:300px;
+                display:inline-block;
+                width:300px;
+                height:200px;
+                background-color:black;
+                position:relative;
+                animation-name:box1;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+            }
+            @keyframes box1{
+                from{
+                    background-color:black;
+                }
+                to{
+                    background-color:white;
+                    border:3px solid black;
+                    margin:0;
+                }
+            }
+            #box2{
+                display:inline-block;
+                width:300px;
+                height:200px;
+                background-color:black;
+                position:absolute;
+                left:500px;
+                animation-name:box2;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+            }
+            @keyframes box2{
+                from{
+                    background-color:black;
+                }
+                to{
+                    background-color:white;
+                    border:3px solid black;
+                    margin-left:0px;
+                    position:absolute;
+                    left:390px;
+                }
+            }
+            #box3{
+                display:inline-block;
+                width:300px;
+                height:200px;
+                background-color:black;
+                position:absolute;
+                left:700px;
+                animation-name:box3;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+            }
+        </style>
+    </head>
+    <body>
+<!--
+        <div id="box"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+-->
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </body>
+</html>

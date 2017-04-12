@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Butcherman|Ceviche+One|Faster+One|Mate+SC" rel="stylesheet">
+    <!--    -ms-, -moz-, -webkit-, -o- 전부 붙여주기! -->
+    <title>WCE-Page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="WCE_Members">
+    <meta name="title" content="WCE:Web-Coding-Everyday">
+    <meta name="description" content="DSM No.1 웹 동아리">
+    <meta name="keywords" content="웹, Web, 프론트엔트, 백엔드">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="WCE-Page">
+    <meta property="og:title" content="DSM No.1 웹 동아리">
+    <meta property="og:description" content="DSM의 웹 동아리 WCE입니다! 기본적인 프로그래밍 언어를 기반으로 웹 프론트엔드 및 백엔드를 공부합니다. 여러 프로젝트 및 대회에 참가한 경험이 있고 앞으로도 열심히하여 DSM을 대표하는 동아리가 될 예정입니다.">
+    
+    <script src="jquery.js"></script>
+    <script type="text/javascript" src="WebCodingEveryday.js">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Outline" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+    <style media="screen" type="text/css">
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  /*      font-family: "Nanum Gothic", sans-serif;
+          font-family: 'Nanum Square';*/
+        * {
+            -ms-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -o-box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            height: 3500px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        header {
+            width: 100%;
+            height: 21.071428%;
+            background: url(Background.jpeg) no-repeat center center fixed;
+            /*            background-image: url(gray.jpg);*/
+        }
+        
+        .dsmlogopart {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            width: 400px;
+            height: 100px;
+            /*            background-color:coral;*/
+        }
+        
+        .dsmlogopart #dsmlogo {
+            width: 70%;
+            position:relative;
+            z-index:1000;
+/*            cursor: pointer;*/
+        }
+        
+        @keyframes title {
+            /* 반응형 위치 고려해서 다시하기! */
+            from {
+                position: absolute;
+                opacity: 0;
+                color: black;
+                text-shadow: 0px 1px #ffffff, 7.5px 7.5px 7.5px white;
+            }
+            to {
+                position: absolute;
+                opacity: 1;
+                color: white;
+                text-shadow: 0px 1px #ffffff, 3.25px 3.25px 3.25px black;
+                letter-spacing: 30px;
+                opacity: 0.95;
+            }
+        }
+        
+        @keyframes subtitle {
+            from {
+                position: absolute;
+                opacity: 0;
+                color: black;
+                text-shadow: 0px 1px #ffffff, 3px 3px 3px white;
+            }
+            to {
+                position: absolute;
+                opacity: 1;
+                color: white;
+                text-shadow: 0px 1px #ffffff, 2.75px 2.75px 2.75px black;
+                letter-spacing: 8px;
+                opacity: 0.95;
+            }
+        }
+
+        @media all and (max-width:989.999999px) {
+            .nav ul {
+                overflow: hidden;
+                list-style-type: none;
+                position: absolute;
+                top: 100px;
+                left: 0;
+            }
+            .nav ul li {
+                float: left;
+            }
+            .nav ul li a {
+                color: #E4E4E4;
+                text-decoration: none;
+                padding-left: 65px;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                transition-timing-function: linear;
+                transition: 1.5s;
+                /*                text-decoration: underline;*/
+            }
+            .nav ul li a:hover{
+                list-style: circle;
+            }
+        }
+        
+        @media all and (max-width:875px){
+            .nav ul li a{
+                padding-left:45px;
+            }
+        }
+        @media all and (max-width:780px){
+            .nav ul li a{
+                padding-left:20px;
+            }
+        }
+        
+        .nav ul li a:hover {  /* 공통 적용 */
+            color: aqua;
+            letter-spacing: 4px;
+        }
+        
+        @media all and (min-width:990px) {
+            .nav {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 850px;
+                height: 100px;
+                /*background-color:coral;*/
+                /* 위치 임의 지정*/
+            }
+            .nav ul {
+                overflow: hidden;
+                list-style-type: none;
+                position: absolute;
+                top: 32.5px;
+                right: 80px;
+            }
+            .nav ul li {
+                float: right;
+            }
+            .nav ul li a {
+                color: #E4E4E4;
+                text-decoration: none;
+                padding-left: 40px;
+                font-size: 12px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                transition-timing-function: linear;
+                transition: 1.5s;
+            }
+        }
+        
+        .Black_Wrap_Box {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .putlogo {
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            text-align: center;
+        }
+        
+        .putlogo #logo {
+            width: 130px;
+            height: 130px;
+            margin-top: 230px;
+            animation-name: logo;
+            animation-duration: 1.75s;
+            /*            animation-timing-function: ease-in-out;*/
+        }
+        
+        @keyframes logo {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .Black_Wrap_Box .MainPart1 {
+            width: 100%;
+            height: 150px;
+            /*background-color:red;*/
+            position: absolute;
+            margin-top: 370px;
+        }
+        
+        .MainPart1 #Title {
+            font-family: 'Audiowide', cursive;
+            font-weight: bold;
+            font-size: 100px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            /*background-color:red;*/
+            animation-name: title;
+            animation-duration: 2s;
+            /*animation-duration: 1.5s;*/
+            /*animation-fill-mode: backwards;*/
+            animation-fill-mode: forwards;
+            margin-top: 5px;
+        }
+        
+        .MainPart1 #SubTitle {
+            /* 로고 이미지 추후 변경 */
+            display: block;
+            position: absolute;
+            margin-top: 150px;
+/*
+            font-size: 20px;
+            font-family: 'Audiowide', cursive;
+*/
+            width: 100%;
+            text-align: center;
+            animation-name: subtitle;
+            animation-duration: 2.75s;
+            animation-delay: 0.7s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            opacity: 0;
+        }
+        .MainPart1 #SubLogo{
+            width:520px;
+            margin-right:47.5px;
+        }
+        
+        section{
+            width:100%;
+            height:2000px;
+            /*background-color:coral;*/ /*위치 지정*/
+        }
+        
+        .seperate{
+            width:100%;
+            height:60px;
+            background-color:#1D1D1D;
+            position:absolute;
+            border-top:2px solid #171717;
+            border-bottom:30px solid #171717;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 2;
+        }
+        .seperate .clickbutton{
+            width:25px;
+            height:25px;
+            transform:rotate(45deg);
+            border-right:8px solid #52B7B2;
+            border-bottom:8px solid #6BDFD9;
+            margin-top:12.5px;
+            cursor:pointer;
+        }
+        article{
+            width:100%;
+            height:1925px;
+        }
+        .introduction{
+            width:100%;
+            height:375px;
+            background-color:#435884;
+            box-shadow:0px 0px 40px 0px black;
+        }
+        
+        /*
+        .introduction .intro_leftpart{
+            width:50%;
+            height:425px;
+            position:absolute;
+        }
+        .introduction .intro_rightpart{
+            width:45%;
+            height:220px;
+            position:absolute;
+            margin-top:110px;
+            margin-left:100px;
+        }
+        .introduction #intro1{
+            position:absolute;
+            height:100%;
+            margin-top:172.5px;
+            margin-left:20px;
+        }
+        .introduction #intro_logo{
+            width:600px;
+            margin-left:45px;
+        }
+        .intro_rightpart .intro2_sentence{
+            color:floralwhite;
+            font-family: 'Nanum Square';
+            letter-spacing:2px;
+            word-spacing:1px;
+            margin-left:700px;
+            font-size:15px;
+            line-height:1.75;
+            display:block;
+            width:100%;
+            height:60px;
+            overflow: auto;
+        }
+        .intro2_sentence .DSM{
+            letter-spacing:0px;
+            font-family: 'Audiowide', cursive;
+        }*/
+        .intro_fin{
+            width:100%;
+            height:50px;
+            background-color:darkgray;
+            box-shadow:0px 0px 10px 0px #343434;
+        }
+        .Page{
+            width:100%;
+            height:500px;
+            border-bottom:1px solid #A4A4A4;
+        }
+        .Page .PageBoxes{
+            display:inline-block;
+            position:relative;
+            width:30%;
+            height:90%;
+            border:1px solid #D2D2D2;
+            margin-left:2.3%;
+            margin-top:1.7%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="dsmlogopart"> 
+            <a href="http://www.ddm.hs.kr/smain.html" target="_blank"><img src="http://www.ddm.hs.kr/home/image/1logo.png" id="dsmlogo"></a>
+        </div>
+        <div class="putlogo"> 
+            <img src="WCE-Logo-White.png" id="logo"> 
+        </div>
+        <div class="Black_Wrap_Box">
+            <div class="MainPart1"> 
+                <span id="Title">WCE</span> 
+                <span id="SubTitle"><img src="SubLogo.png" id="SubLogo"></span>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <!-- href값 임의 지정 -->
+                <li><a href="#blog">블로그</a></li>
+                <li><a href="#diary">동아리 일정</a></li>
+                <li><a href="#alert">공지사항</a></li>
+                <li><a href="#activity">경력 및 활동</a></li>
+                <li><a href="#site">관련 사이트</a></li>
+                <li><a href="#intro">동아리 소개</a></li>
+            </ul>
+        </div>
+        <!--<div class="logoImg">
+           <img src="../WCEPAGE/WCE-Logo-White.png" id="logo"> 
+        </div>-->
+    </header>
+        
+    <section>
+        <div class="seperate">
+            <div class="clickbutton" onclick="fnMove('1')"></div>
+        </div>
+        <article id="Part1">
+            <div class="introduction">
+                <!--<div class="intro_leftpart">
+                    <span id="intro1"><img src="SubLogo.png" id="intro_logo"></span>
+                </div>-->
+                <!--<div class="intro_rightpart">    
+                   <span class="intro2_sentence">
+                       WCE는 Web Coding Everyday의 약자로써 
+                       <span style="color:#164EC7;" class="DSM">D</span>
+                       <span style="color:#CBC131;" class="DSM">S</span>
+                       <span style="color:#BA2424" class="DSM">M</span>
+                       을 대표하는 웹 동아리입니다.
+                   </span><br>
+                    
+                   <span class="intro2_sentence">
+                       프로그래밍 지식들을 바탕으로 웹 프론트엔드, 백엔드를 공부하며 지속적인 프로젝트를<br>
+                       통해 실력을 다지고 있습니다.
+                    </span><br>
+                    
+                   <span class="intro2_sentence">
+                       또한, 각종 대회에 참가하여 수상한 경력이 있고 다양한 컨퍼런스 및 세미나에 참가하여<br>
+                       많은 개발자분들과 소통하였습니다.
+                   </span>        
+                </div>-->
+            </div>
+            <div class="intro_fin"></div> <!-- 동아리 소개 끝 -->
+            <div class="Page">
+               <div class="PageBoxes">
+                  
+               </div>
+               <div class="PageBoxes">
+                   
+               </div>
+               <div class="PageBoxes">
+                  
+               </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>

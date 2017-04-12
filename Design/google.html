@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google</title>
+    <style media="screen">
+      .main{
+        background-image: url(galaxy.jpg);
+        position: relative;
+      }
+      .Google #main_word{
+        position: absolute;
+        color:rgba(255, 255, 255, 1);
+        font-size:100px;
+        left:40%;
+        top:50px;
+        text-shadow: -1.3px 0 lightblue, 0 1.3px lightblue,
+                      1.3px 0 lightblue, 0 -1.3px lightblue;
+      }
+      #input{
+        position:absolute;
+        width: 350px;
+        height : 30px;
+        font-size:15px;
+        text-align:left;
+        top:310px;
+        left:37.55%;
+      }
+      .side_form{
+        top:370px;
+        left:40%;
+        border: 1px solid gray;
+        background-color: #E9EBE9;
+        width:120px;
+        height:85px;
+        position:absolute;
+      }
+      .side_form2{
+        top:370px;
+        left:40%;
+        position:absolute;
+        width:107px;
+        height:65px;
+        background-color: rgba(255,255,255,0.6);
+        margin-top:20px;
+        margin-left:7px;
+      }
+      #underform{
+        top:475px;
+      }
+      #underform2{
+        top:475px;
+        left:52%;
+      }
+      #naver{
+        position:absolute;
+        width:107px;
+        height:65px;
+        border-style: none;
+      }
+      #word{
+        font-size:10px;
+        margin-left:13px
+      }
+      #second{
+        left:52%;
+      }
+    </style>
+  </head>
+  <body class="main">
+    <div class="Google">
+      <a href="http://www.google.com">
+        <p id="main_word">Google</p>
+      </a>
+    </div>
+    <div class="input_form">
+      <form action="http://search.php">
+        <input type="text" name="search" id="input"
+        placeholder="Google 검색 또는 URL 입력"
+        onkeypress="javascript:if(event.keyCode==13){}">
+      </form>
+    </div>
+    <div class="side_form">
+      <span id="word">세상을 깨우는 네이버</span>
+    </div>
+    <div class="side_form2">
+      <a href="http://www.naver.com" target="_blank">
+        <img src="naver.png" alt="" id="naver">
+      </a>
+    </div>
+    <div class="side_form" id="second">
+      <span id="word">사람들의 소통, 다음</span>
+    </div>
+    <div class="side_form2" id="second">
+      <a href="http://www.daum.co.kr" target="_blank">
+        <img src="daum.png" alt="" id="naver">
+      </a>
+    </div>
+    <div class="side_form" id="underform">
+      <span id="word">소통의 중심, 네이트온</span>
+    </div>
+    <div class="side_form2" id="underform">
+      <a href="http://www.nate.com" target="_blank">
+        <img src="nate.png" alt="" id="naver">
+      </a>
+    </div>
+    <div class="side_form" id="underform2">
+      <span id="word">아침을 맞이하며, 야후</span>
+    </div>
+    <div class="side_form2" id="underform2">
+      <a href="http://us.yahoo.com" target="_blank">
+        <img src="yahoo.png" alt="" id="naver">
+      </a>
+    </div>
+  </body>
+</html>

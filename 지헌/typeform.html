@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+        <style media="screen" type="text/css">
+            /* 이름 맘에 안들면 니가 바꾸고 디자인 맘에 안들면 늘려줌. */
+            body{
+                background-color:black; /*배경색 border값 때문에 임의로 지정*/
+            }
+            .BoxWrap{
+                width:600px;
+                height:275px;
+                background-color:#3C3C3C;
+                border-top:1px solid white;
+                border-bottom:3px solid white;
+                margin:50px; /*보기 편하라고 임의로 지정해줌 */
+            }
+            .SameBoxes{
+                position:relative;
+                width:375px;
+                height:60px;
+                background-color:#695D78;
+                border-radius:2px;
+                margin-left:30px;
+                margin-top:32.5px;
+                cursor:pointer;
+                /* 심심해서 지정해줌 */
+                transition-timing-function: ease-in-out;
+                transition:1.5s;
+            }
+            .SameBoxes:hover{
+                background-color:#5B4F6A;
+            }
+            .SameBoxes .Name{
+                display:block;
+                width:100%;
+                color:#E1E1E1;
+                font-size:33px;
+                padding-top:1.75%;
+            }
+            #First{
+                letter-spacing:40px;
+                margin-left:137.5px; /* letter-spacing때문에 text-align 값 제대로 적용 안되서 margin값으로 위치 지정해줌. */
+            }
+            #Second{
+                letter-spacing:4.5px;
+                margin-left:137.5px;
+            }
+            #Third{
+                margin-left:126px;
+            }
+            #CheckBox{
+                position:absolute;
+                width:17.5px;
+                height:17.5px;
+                margin-left:335px;
+                top:18.25px;
+            }
+            #BoxSpace{
+                margin-top:15px;
+            }
+            .SendInfo{
+                width:150px;
+                height:207.5px;
+                position:absolute;
+                background-color:#8F80A3;
+                top:81.75px;
+                margin-left:425px;
+                border-radius:5px;
+                border:3px solid #BFABD9;
+            }
+            .SendInfo .CoverBox{
+                position:absolute;
+                bottom:0;
+                width:100%;
+                height:50%;
+                background-color:#61586D;
+                z-index:1;
+            }
+            .SendInfo .ClickToServer{
+                position:absolute;
+                z-index:1000;
+                width:100%;
+                height:100%;
+            }
+            .SendInfo .FinishButton{
+                position:relative;
+                color:floralwhite;
+                font-size:36px;
+                margin-left:40px;
+                top:55px;
+            }
+            .SendInfo #SubmitBox{
+                position:absolute;
+                z-index:9999;  /* submit박스 맨 위에 위치 */
+                width:100%;
+                height:100%;
+                cursor:pointer;
+                opacity:0.000001; /* 지금 나한텐 이게 최선...안보이게 함 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="BoxWrap"> <!-- 전체 박스 부분 -->
+           <div class="SameBoxes">
+              <span class="Name" id="First">
+                  姓名
+              </span> 
+           </div>
+           <div class="SameBoxes" id="BoxSpace">
+              <span class="Name" id="Second">
+                  手机号 
+              </span>
+           </div>
+           <div class="SameBoxes" id="BoxSpace">
+              <span class="Name" id="Third">
+                  微信/QQ
+              </span>
+              <input type="checkbox" id="CheckBox">
+           </div>
+           <form action="http://localhost/login.php"> <!-- 서버 전송 form 태그로 함 -->
+               <div class="SendInfo">
+                   <input type="submit" id="SubmitBox">
+                   <div class="CoverBox"></div> <!-- 색깔 다른 박스 부분 -->
+                   <div class="ClickToServer">
+                      <span class="FinishButton">
+                          申请
+                      </span><br> <!-- 원래 div박스에 word-wrap적용하려 했는데 그냥 br태그 박음 ㅋ -->
+                      <span class="FinishButton">
+                          商谈
+                      </span>
+                   </div>
+               </div>
+           </form>
+        </div>
+    </body>
+</html>

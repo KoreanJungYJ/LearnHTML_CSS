@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Day1</title>
+    <meta charset="utf-8">
+    <style>
+        div {
+            color: #1B232F;
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 3em;
+            font-weight: bold;
+            text-decoration: none;
+            color:white;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-top:300px;
+        }
+        body{
+            background:url(back.jpg) no-repeat center;
+            width:100%;
+            height:100%;
+            position:relative;
+        }
+        #blackbox{
+            width:100%;
+            height:100%;
+            background-color:black
+        }
+    </style>
+</head>
+
+<body id="blackbox"> 
+    <div id="countdown"></div>
+    <div id="blackbox"></div>
+    <script src="../jquery.js"></script>
+    <script type="text/javascript">
+        function countdown(elementId, seconds) {
+            var element, endTime, hours, mins, msLeft, time;
+
+            function updateTimer() {
+                msLeft = endTime - (+new Date);
+                if (msLeft < 0) {
+                    console.log('done');
+                }
+                else {
+                    time = new Date(msLeft);
+                    hours = time.getUTCHours();
+                    mins = time.getUTCMinutes();
+                    element.innerHTML = (hours ? hours + ':' + ('0' + mins).slice(-2) : mins) + ':' + ('0' + time.getUTCSeconds()).slice(-2);
+                    setTimeout(updateTimer, time.getUTCMilliseconds());
+                    // if you want this to work when you unfocus the tab and refocus or after you sleep your computer and come back, you need to bind updateTimer to a $(window).focus event^^
+                }
+            }
+            element = document.getElementById(elementId);
+            endTime = (+new Date) + 1000 * seconds;
+            updateTimer();
+        }
+        countdown('countdown', 86400);
+    </script>
+</body>
+
+</html>

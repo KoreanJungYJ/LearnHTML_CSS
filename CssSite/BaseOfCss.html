@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+    <title>BaseOfCss</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Css 기초 도우미 사이트">
+    <meta name="author" content="정윤재(JungYunJae)">
+    <link rel="stylesheet" href="BaseOfCssStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="Header_Title_Part"> 
+            <span id="Title">
+                <a href="BaseOfCss.html">
+                    -Base Of Css-  
+                </a>
+            </span>
+            <span id="Sub_Title">
+                    It's a website which can develop your web skill.
+            </span>
+            <nav>
+                <ul> <!-- a태그들 ajax로 나중에 변동 -->
+                    <li><a href="#HTMLBASE" id="B_E">Basic Elements</a></li>
+                    <li><a href="#Selector">Selector</a></li>
+                    <li><a href="#font">Font</a></li>
+                    <li><a href="#paragraph">Paragraph</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#boxmodel">Box Model</a></li>
+                    <li><a href="#attribute">Attribute</a></li>
+                    <li><a href="#position">Position</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <article>
+            <div class="Explain">
+               <span id="Priority">
+                   HTML / CSS
+               </span>
+                <span id="Sub">
+                    Hyper Text MarkUp Language - Cascading Style Sheets
+                </span>
+            </div>
+            <!--<div class="HTML_Picture">
+               <img src="HTML.png" id="HTML_PIC">
+            </div>-->
+            <div class="Wrap_Explain">
+                <div class="All_Explain">
+                    <div class="Ex_Boxes" id="RedBox">
+                        <span id="RedBox_Ex">
+                            HTML 이란?
+                        </span>
+                        <span class="Box_SubEx">
+                            월드 와이드웹 문서를 작성하는 <span class="lightblue">MarkUp Language</span>이다. 여러 태그들로 구성되어 있으며, 각 태그들을 사용하여 원하는 형태의 문서를 만들어 갈 수 있다. <span class="lightblue">Hyper Text</span>의 원리를 이용하여 다양한 정보를 손쉽게 검색하여 볼 수 있게 해주는 언어이다.
+                        </span>
+                    </div>
+                    <div class="Ex_Boxes" id="PinkBox">
+                        <span id="PinkBox_Ex">
+                            자주 사용되는 HTML 태그들
+                        </span>
+                        <span class="Box_SubEx" id="PinkBox_Font">
+                            <a href="https://www.w3schools.com/tags/tag_div.asp" target="_blank">div</a>
+                            <a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank">span</a>
+                            <a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">a</a>
+                            <a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank">ul/ol</a>
+                            <a href="https://www.w3schools.com/tags/tag_li.asp" target="_blank">li</a>
+                            <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">img</a>
+                            <a href="https://www.w3schools.com/tags/tag_hn.asp" target="_blank">h1~h6</a>
+                            <a href="https://www.w3schools.com/tags/tag_header.asp" target="_blank">header</a>
+                            <a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank">section</a>
+                            <a href="https://www.w3schools.com/tags/tag_footer.asp" target="_blank">footer</a>
+                        </span>
+                        <!--<div class="Source">
+                           <a href="https://www.w3schools.com" target="_blank">www.w3schools.com</a> 
+                        </div>-->
+                    </div>
+                    <div class="Ex_Boxes" id="YellowBox">
+                       <span id="YellowBox_Ex">
+                           CSS란?
+                       </span>
+                       <span class="Box_SubEx">
+                            HTML, XHTML, XML과 같은 문서의 스타일을 꾸밀 때 사용하는 <span class="lightblue">스타일 시트 언어</span>이다. 글꼴이나, 배경색, 너비와 높이, 위치 등을 지정하거나 웹 브라우저, 스크린 크기, 장치에 따라서 화면을 다르게 표시될 수 있도록 지정한 것이 큰 특징이라고 할 수 있다.
+                       </span>
+                    </div>
+                    <div class="Ex_Boxes" id="BlueBox">
+                       <span id="BlueBox_Ex">
+                           CSS 적용 방법
+                       </span>
+                       <span class="Box_SubEx">
+                           <a href="https://www.cmsfactory.net/node/11412" target="_blank" id="BlueBox_A">
+                           <li>Inline Style Sheet</li>
+                           <li>Internal Style Sheet</li>
+                           <li>Linking Style Sheet</li>
+                           </a>
+                       </span>
+                    </div>
+                </div>
+                <div class="Help_Sites">
+                        <div class="Wrap_Box"></div>
+                        <div class="OverFlowM">
+                            <div class="Black_Boxes">
+                               <div class="WhiteCover">
+                                   <!-- 귀찮아서 a 및 img 태그 Inline 스타일 시트로 적용 -->
+                                    <img src="w3s2.png" style="width:90%; height:30%; margin-top:50px;margin-left:6px;">
+                                    <a href="https://www.w3schools.com" style="padding-top:60px" target="_blank">w3schools</a>
+                               </div>
+                            </div>
+                            
+                            <div class="Black_Boxes" style="background-color:#757575">
+                               <div class="WhiteCover">
+                                   <img src="mozila.png" style="width:80%;height:80%;margin-left:19.5px;margin-top:15px;">
+                                   <a href="https://www.mozilla.org/ko/" target="_blank" style="padding-top:19.5px;color:#E1E1E1;">Mozilla</a>
+                               </div> 
+                            </div>
+                            
+                            <div class="Black_Boxes" style="background-color:#D5D5D5">
+                               <div class="WhiteCover">
+                                   <img src="inflearn.png" style="width:100%;margin-top:24px;margin-left:3.75px">
+                                   <a href="https://www.inflearn.com/" target="_blank" style="padding-top:35.75px;color:#2D2D2D;font-weight:bolder;">Inflearn</a>
+                               </div>
+                            </div>   
+                        </div>
+                        
+                        <div class="RightTitle"> <!-- 오른쪽 단락 나눈 것 중 설명글 부분 -->
+                           Hel<span style="color:Red;">p</span>fu<span style="color:blue;">l</span> Si<span style="color:purple;">t</span>es
+                        </div>
+                        <!--<div class="footer">
+                            <span id="Producer">Produced by JungYunJae<br>2017-03-17<br>-2017-03-21</span>
+                        </div>-->
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>

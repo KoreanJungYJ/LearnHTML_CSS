@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Butcherman|Ceviche+One|Faster+One|Mate+SC" rel="stylesheet">
+        <style>
+            #font{
+                font-family: 'Ceviche One', cursive;
+                font-size:40px;         
+                animation-name: ex1;
+                animation-duration:2s;
+/*                animation-iteration-count: infinite;*/
+            }
+            #font2{
+                font-family: 'Ceviche One', cursive;
+                font-size:16px;
+                animation-name: ex2;
+                animation-delay: 1s;
+                animation-duration: 1.5s;
+                animation-fill-mode: backwards;
+/*                animation-iteration-count: infinite;*/
+            }
+            @keyframes ex1{
+                from{
+                    margin-left:300px;
+                    opacity: 0;    
+                }
+                to{
+                    margin:0;
+                    opacity:1;
+                }
+            }
+            @keyframes ex2{
+                from{
+                    margin-left:300px;
+                    opacity:0;
+                }
+                to{
+                    margin:0;
+                    opacity:1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="font">
+            Web Coding Everyday
+        </div>
+        <div id="font2">
+            No.1 DSM Web CLUB
+        </div>
+    </body>
+</html>
