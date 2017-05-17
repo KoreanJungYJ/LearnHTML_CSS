@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style media="screen" type="text/css">
+        body {
+            background-color: #2F2F2F;
+        }
+        
+        .container {
+            width: 110px;
+            height: 250px;
+            border: 3px solid #F29A18;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #686868, #262626, #454545);
+            display:inline-block;
+            position:relative;
+        }
+        
+        .container #font {
+            text-align: center;
+            color: #FFC400;
+            font-size: 13px;
+            margin-top:10px;
+        }
+        .container #circle{
+            width:64px;
+            height:64px;
+            border-radius: 100%;
+            background:linear-gradient(#DC6E00,#DAB40E,#DC6E00);
+            margin: 0 auto;
+            margin-top:40px;
+            border:2px solid black;
+            cursor:pointer;
+            transition-timing-function: linear;
+            transition:1.5s;
+        }
+        #circle:hover{
+            transform:rotate(720deg);
+        }
+        #circle #circle2{
+            width:85%;
+            height:85%;
+            background:linear-gradient(#5F5F5F,#242424);
+            border-radius: 100%;
+            margin:0 auto;
+            margin-top:4px;
+            border:1px solid #222222;
+        }
+        #num{
+            font-size:13px;
+            color:white;
+            text-align: center;
+            margin-top:10px;
+        }
+        #defend{
+            text-align: center;
+            color:#808080;
+            font-size:12.5px;
+            margin-top:2px;
+            cursor:pointer;
+        }
+        #defend:hover{
+            color:darkgray;
+            font-weight:bold;
+        }
+        #final{
+            text-align: center;
+            font-size:11px;
+            font-weight: bold;
+            color:darkgray;
+            margin-top:42.5px;
+            letter-spacing: 1px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="font"> Active Defense </div>
+        <div id="circle">
+            <div id="circle2"></div>
+        </div>
+        <div id="num">0</div>
+        <div id="defend" onclick="clicked();">실행 차단</div>
+        <div id="final">-상세 보기-</div>
+    </div>
+    <div class="container" style="margin-left:20px;border:3px solid #1FA3CB;">
+        <div id="font" style="color:#7D8FE7;"> Attack Mode </div>
+        <div id="circle" style="background:linear-gradient(#1C5FFE,#30C1FF,#1C5FFE)">
+            <div id="circle2"></div>
+        </div>
+        <div id="num">0</div>
+        <div id="defend" onclick="clicked();">실행 차단</div>
+        <div id="final">-상세 보기-</div>
+    </div>
+    <div class="container" style="margin-left:20px;">
+        <div id="font"> Scanning System </div>
+        <div id="circle">
+            <div id="circle2"></div>
+        </div>
+        <div id="num">0</div>
+        <div id="defend" onclick="clicked();">실행 차단</div>
+        <div id="final">-상세 보기-</div>
+    </div>
+<!--
+    <script src="../jquery.js"></script>
+    <script type="text/javascript">
+        function clicked(){
+            $("body").css("background-color","red");
+        }
+    </script>
+-->
+</body>
+
+</html>

@@ -1,4 +1,0 @@
-margin:10px - 상우하좌의 margin값이 10px
-margin:10px 20px - 상하 10px, 좌우 20px,
-margin:10px 20px 30px - 상 10px, 좌우 20px, 하 30px
-margin:10px 20px 30px 40px - 상우하좌의 순으로 값이 지정됨

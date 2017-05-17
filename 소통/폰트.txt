@@ -1,0 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Julius+Sans+One|Rubik+Mono+One" rel="stylesheet">
+
+font-family: 'Rubik Mono One', sans-serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Advent Pro', sans-serif;

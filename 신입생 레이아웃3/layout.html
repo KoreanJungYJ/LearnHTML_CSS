@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Layout_Version3</title>
+        <meta charset="utf-8">
+        <script src="../jquery.js"></script>
+        <style media="screen" type="text/css">
+            body{
+                width:100vw;
+                height:100vh;
+                position:relative;
+                margin:0 auto;
+            }
+            #header{
+                width:100%;
+                height:25%;
+            }
+            #logo{
+                width:150px;
+                margin-left:565px;
+                margin-top:53px;
+            }
+            #explain{
+                width:250px;
+                position:absolute;
+                margin-top:72px;
+                margin-left:5px;
+            }
+            #section{
+                width:100%;
+                height:75%;
+                /*background-color:aqua;*/
+                position:relative;
+            }
+            .box{
+                width:33%;
+                height:100%;
+                display:inline-block;
+                /*background-color:aqua;*/
+            }
+            #first{
+                background:linear-gradient(to right,#1cb3e6,#10FFF7);
+            }
+            #second{
+                background-color:#fccf56;
+                background:linear-gradient(to right,#fccf56,#FFF710);
+            }
+            #third{
+                background-color:#ED2568;
+                background:linear-gradient(to right,#ED2568,#F76198);
+            }
+            #graybox{
+                width:100%;
+                height:25%;
+                position:absolute;
+                top:0;
+                z-index: 9999;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            color:#1cb3e6
+            color:#fccf56"
+            color:#FF528C"
+        -->
+        <div id="header">
+            <img src="dsm%20%EB%A1%9C%EA%B3%A02.png" id="logo">
+            <div id="graybox"></div>
+<!--
+            <span id="upperword">
+                <span style="color:#1cb3e6">창의성</span>과 
+                <span style="color:#fccf56">인간미</span>를 품은 
+                <span style="color:#FF528C">소프트웨어 영재의 육성</span>
+            </span>
+-->
+            <img src="explain2.PNG" id="explain">
+        </div>
+        <div id="section">
+            <div class="box" id="first"></div>
+            <div class="box" id="second"></div>
+            <div class="box" id="third"></div>
+        </div>
+    </body>
+</html>

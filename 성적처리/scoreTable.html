@@ -1,0 +1,647 @@
+<html>
+    <head>
+        <title>Table</title>
+        <meta charset="utf-8">
+        <script src="../jquery.js"></script>
+        <style media="screen" type="text/css">
+            *{
+                margin:0;
+                padding:0;
+                border:0;
+                font-size:100%;
+                vertical-align: baseline;
+                box-sizing:border-box;
+                outline:none;
+            }
+            body{
+                width:1200px;
+                height:200vh;
+                position:relative;
+                margin:0 auto;
+            }
+            table{
+                border-collapse: collapse;
+                border-spacing: 0;
+                width:100%;
+                margin:0 auto;
+                margin-top:25px;
+            }
+            #keywords thead {
+                cursor: pointer;
+                background: #c9dff0;
+            }
+            #keywords thead tr th { 
+              font-weight: bold;
+              padding: 12px 40px;
+              padding-left: 35px;
+            }
+            #keywords tbody tr { 
+                color: black;
+            }
+            #keywords tbody tr td{
+                text-align:center;
+                /* 임시 border값 */
+            }
+            #keywords tbody tr th {
+              text-align: left;
+            }
+            #keywords tbody tr .paddingUp{
+                display:block;
+                margin-top:35px;
+            }
+            .clickbox{
+                width:155px;
+                float:left;
+                position:absolute;
+                margin-top:28.5px;
+                font-size:0;
+                margin-left:10.5px;
+            }
+            .clickbox .alphabetbox{
+                position:relative;
+                display:inline-block;
+                width:calc(100%/5);
+                height:27px;
+                border:1px solid gray;
+                color:black;
+                font-size:1.1rem;
+            }
+            .alphabetbox:hover{
+                background-color:lightblue;
+                color:white;
+                cursor:pointer;
+            }
+            #lineSeperate{
+                width:100%;
+                margin:0 auto;
+                height:30px;
+                margin-top:50px;
+                background-color:lightblue;
+            }
+            #volunteer{
+                width:50%;
+                height:350px;
+                display:inline-block;
+                border-left:2px solid lightblue;
+                border-bottom:2px solid lightblue;
+            }
+            #volunteer #radiobutton{
+                margin-left:40px;
+                margin-top:20px;
+                letter-spacing: 0.5px;
+                line-height: 1.8;
+            }
+            #attend{
+                position:absolute;
+                right:0;
+                width:50%;
+                height:350px;
+                display:inline-block;
+                border-left: 2px solid lightblue;
+                border-right:2px solid lightblue;
+                border-bottom:2px solid lightblue;
+            }
+            #attendbox{
+                width:300px;
+                height:200px;
+                /*background-color:red;*/
+                line-height:3;
+                margin-left:40px;
+                margin-top:37.5px;
+            }
+            #attendbox #absenceBox{
+                font-size:0.9rem;
+                padding-left:15px;
+            }
+            #attendBox #lateBox{
+                font-size:0.9rem;
+                padding-left:15px;
+            }
+            #attendBox #earlyLeaveBox{
+                font-size:0.9rem;
+                padding-left:15px;
+            }
+            #attendBox #classAbsenceBox{
+                font-size:0.9rem;
+                padding-left:15px;
+            }
+            h1{
+                font-size:1.6rem;
+                text-align: center;
+                margin-top:10px;
+            }
+            h2{
+                font-size:1.1rem;
+                text-align: center;
+            }
+            #cal{
+                width:90px;
+                height:35px;
+                border:2px solid black;
+                border-radius: 5px;
+                float:right;
+                margin-top:7.5px;
+                text-align: center;
+                font-size:0.9rem;
+                font-weight:bold;
+                padding-top:0.3rem;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>-성적 입력-</h1>
+        <table cellspacing="0" cellpadding="0" id="keywords">
+            <thead>
+                <tr>
+                    <th><span>이수 여부</span></th>
+                    <th><span><input type="checkbox" checked="true" name="completeCheck"></span></th>
+                    <th><span><input type="checkbox" checked="true" name="completeCheck"></span></th>
+                    <th><span><input type="checkbox" checked="true" name="completeCheck"></span></th>
+                    <th><span><input type="checkbox" checked="true" name="completeCheck"></span></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th><span></span></th>
+                    <th><span style="padding-right:40px;padding-left:45px">1학년 1학기</span></th>
+                    <th><span style="padding-right:40px;padding-left:45px">1학년 2학기</span></th>
+                    <th><span style="padding-right:40px;padding-left:45px">2학년 1학기</span></th>
+                    <th><span style="padding-right:40px;padding-left:45px">2학년 2학기</span></th>
+                    <th><span style="padding-right:40px;padding-left:45px">3학년 1학기</span></th>
+                    <th><span style="padding-right:40px;padding-left:45px">3학년 2학기</span></th>
+                </tr>
+                <tr>
+                    <th><span class="paddingUp">국어</span></th>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="paddingUp">사회</span></th>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="paddingUp">역사</span></th>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="paddingUp">수학</span></th>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="paddingUp">과학</span></th>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="paddingUp">기술º가정</span></th>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="paddingUp">영어</span></th>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="clickbox">
+                           <div class="alphabetbox">A</div>
+                           <div class="alphabetbox">B</div>
+                           <div class="alphabetbox">C</div>
+                           <div class="alphabetbox">D</div>
+                           <div class="alphabetbox">E</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="cal">계산하기</div>
+        <div id="lineSeperate">
+        </div>
+        <div id="volunteer">
+            <h1>봉사 활동</h1>
+            <div id="radiobutton">
+                <input type="radio" name="radiocheck"> 50시간 이상.<br>
+                <input type="radio" name="radiocheck"> 45시간 이상, 50시간 미만.<br>
+                <input type="radio" name="radiocheck"> 40시간 이상, 45시간 미만.<br>
+                <input type="radio" name="radiocheck"> 35시간 이상, 40시간 미만.<br>
+                <input type="radio" name="radiocheck"> 30시간 이상, 35시간 미만.<br>
+                <input type="radio" name="radiocheck"> 25시간 이상, 30시간 미만.<br>
+                <input type="radio" name="radiocheck"> 20시간 이상, 25시간 미만.<br>
+                <input type="radio" name="radiocheck"> 15시간 이상, 20시간 미만.<br>
+                <input type="radio" name="radiocheck"> 15시간 미만.<br>
+            </div>
+        </div
+        ><div id="attend">
+            <h1>출석 성적</h1>
+            <h2>(산출 기준: 3학년 당년 9월 30월까지.)</h2>
+            <div id="attendbox">
+                총 무단 결석 일수 : <input type="number" value="0" min="0" max="999" id="absenceBox"><br>
+                총 무단 지각 일수 : <input type="number" value="0" min="0" max="999" id="lateBox"><br>
+                총 무단 조퇴 일수 : <input type="number" value="0" min="0" max="999" id="earlyLeaveBox"><br>
+                총 무단 결과 일수 : <input type="number" value="0" min="0" max="999" id="classAbsenceBox">
+            </div>
+        </div>
+                <script type="text/javascript">
+            Array.from(document.querySelectorAll(".clickbox"))
+                .forEach(group => group.addEventListener("click", event => {
+                    if (event.target.classList.contains("alphabetbox")) {
+                        const on = event.target.classList.contains("on");
+                        Array.from(group.children).forEach(alphabox => {
+                            alphabox.style = null;
+                            alphabox.classList.remove("on");
+                        });
+                        if (!on) {
+                            Object.assign(event.target.style, {
+                                backgroundColor: "lightblue",
+                                color: "white"
+                            });
+                            event.target.classList.add("on");
+                        }
+                    }
+                }, false));
+
+            const cal = function() {
+                const get_column_data = function(i) {
+                    return Array.from(document.querySelectorAll("#keywords tr > td:nth-of-type(" + i + ") .clickbox"))
+                        .map(clickbox => {
+                            const pressed = clickbox.querySelector(".on");
+                            return pressed ? pressed.textContent : "None";
+                        });
+                };
+                return {
+                    "11": get_column_data(1),
+                    "12": get_column_data(2),
+                    "21": get_column_data(3),
+                    "22": get_column_data(4),
+                    "31": get_column_data(5),
+                    "32": get_column_data(6)
+                };
+            };
+
+            document.getElementById("cal").addEventListener("click", _ => {
+                const inputs_JSON = JSON.stringify(cal());
+                console.log(inputs_JSON);
+            })
+        </script>
+    </body>
+</html>

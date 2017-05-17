@@ -1,0 +1,131 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+.ryan {
+    position: relative;
+    width: 600px;
+    height: 570px;
+    margin: 0 auto;
+}
+
+.ryan .face {
+    bottom: 0;
+    position: absolute;
+    width: 500px;
+    height: 450px;
+    border-radius: 100%;
+    background-color: #B07913;
+    border: 14px solid black;
+}
+
+.left_ear {
+    left: 60px;
+    top: 100px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #B07913;
+    border: 14px solid black;
+}
+
+.right_ear {
+    right: 160px;
+    top: 100px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #B07913;
+    border: 14px solid black;
+}
+
+.ryan .left_eyebrow {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    width: 120px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.ryan .right_eyebrow {
+    position: absolute;
+    top: 100px;
+    right: 70px;
+    width: 120px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.ryan .left_eye {
+    position: absolute;
+    top: 150px;
+    left: 110px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.ryan .right_eye {
+    position: absolute;
+    top: 150px;
+    right: 110px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.nose {
+    position: absolute;
+    top: 210px;
+    left: 44%;
+    width: 55px;
+    height: 55px;
+    background-color: black;
+    border-radius: 80% 80% 100% 100%;
+}
+
+.left_mouse {
+    position: absolute;
+    top: 225px;
+    left: 140px;
+    width: 120px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid black;
+}
+
+.right_mouse {
+    position: absolute;
+    top: 225px;
+    right: 140px;
+    width: 120px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid black;
+}
+
+.center {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    top: 240px;
+    left: 42%;
+}

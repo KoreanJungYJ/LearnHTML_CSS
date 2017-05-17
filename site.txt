@@ -1,9 +1,0 @@
-mozila-MDN
-w3.org-W3C
-tryhelloworld
-inflearn
-coursera
-codecademy
-
-http://presentation.creative-tim.com/
-https://developer.mozilla.org/en-US/docs/Web/Events/animationstart
